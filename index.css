@@ -187,7 +187,8 @@ body, html {
   font-size: 20px;
 }
 .op{
-  position: relative;
+    color:transparent;
+    position: relative;
     padding: 0px 0px 0px 0px;
     background-color: black;
     z-index: 5;
