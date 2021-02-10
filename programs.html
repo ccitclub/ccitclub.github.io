@@ -13,7 +13,7 @@
     <script src="programmes/event-slider.js" type="text/javascript"></script>
     <script src="typed.js"></script>
     <style media="screen">
-      body{
+      html,body{
         color: black;
         background-color: white;
       }
@@ -21,7 +21,24 @@
         font-size: 4rem;
         text-align: center;
         padding-top: 70px;
+        /* display: none; */
       }
+      .animating-slider{
+        color:black;
+      }
+      #programmes{
+        color: white;
+        padding: 10px 0px;
+        margin: 70px 0px 0px 0px;
+        background-color: red;
+        font-size: 3rem;
+        text-align: center;
+
+      }
+      #ninja-slider{
+        max-height:400px;
+      }
+
     </style>
   </head>
   <body>
@@ -43,8 +60,59 @@
         </div>
     </div>
     </div>
-    <section class="fail-safe">
-      UNDER <br>DEVELOPMENT
-    </section>
 
+    <container class="animating slider">
+      <h1 id="programmes">PROGRAMMES</h1>
+      <div id="ninja-slider">
+          <div class="slider-inner">
+              <ul>
+                <li>
+                  <a class="ns-img" href="programmes/img/prgrmmng-contst.png"></a>
+                  <div class="caption"></div>
+                </li>
+                  <li>
+                      <a class="ns-img" href="programmes/img/givaway.jpg"></a>
+                      <div class="caption"></div>
+                  </li>
+                  <li>
+                      <a class="ns-img" href="programmes/img/cprgrmmngclss.jpg"></a>
+                      <div class="caption"></div>
+                  </li>
+                  <li>
+                      <a class="ns-img" href="programmes/img/cmps-ambssdr.jpg"></a>
+                      <div class="caption"></div>
+                  </li>
+                  <li>
+                      <a class="ns-img" href="programmes/img/techfest.png"></a>
+                      <div class="caption"></div>
+                  </li>
+              </ul>
+              <div class="navsWrapper">
+                  <div id="ninja-slider-prev"></div>
+                  <div id="ninja-slider-next"></div>
+              </div>
+          </div>
+      </div>
+    </container>
+    <div class="fail-safe">
+      UNDER <br>DEVELOPMENT
+    </div>
+
+<script type="text/javascript">
+$(function() {
+
+              var header = $(".thisnavbar");
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (window.innerWidth>=764) {
+              if (scroll >= 65) {
+                  header.addClass("colorChng");
+              } else {
+                  header.removeClass("colorChng");
+              }
+            }
+
+        });
+  });
+</script>
     </body>
