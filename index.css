@@ -401,20 +401,15 @@ body, html {
 } /* FROM EXECUTIVE>HTML*/
 
 .display-none{display: none;}
-.fa-toggle-off{
+.fa-toggle-on, .fa-toggle-off{
   cursor: pointer;
-  font-size: 4rem;
+  font-size: 2.4rem;
   position: fixed;
   bottom: 2%;
   right: 5%;
 }
-.fa-toggle-on {
-  color: black;
-  cursor: pointer;
-  font-size: 4rem;
-  position: fixed;
-  bottom: 2%;
-  right: 5%;
+.fa-toggle-on{
+   color:black;
 }
 .lightMode {
   display: block;
