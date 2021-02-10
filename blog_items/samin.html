@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CCITC</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="icon" type="image/png" href="../img/brico.png">
+    <link rel="stylesheet" href="blog.css">
+    <style media="screen">
+      p{
+        font-family: Montserrat, sans-serif;
+        font-size: 1.9rem;
+        text-align: justify;
+      }
+      .codes{
+        min-width: 100%;
+        background-color: #f9f2f4;
+      }
+      .display-none{display: none;}
+      .fa-toggle-off{
+        cursor: pointer;
+        font-size: 4rem;
+        position: fixed;
+        bottom: 2%;
+        right: 5%;
+      }
+      .fa-toggle-on {
+        color: black;
+        cursor: pointer;
+        font-size: 4rem;
+        position: fixed;
+        bottom: 2%;
+        right: 5%;
+      }
+      .lightMode{
+        display: block;
+        font-size: 12px;
+        text-align: center;
+        margin: 4px auto;
+      }
+      .darkMode{
+        background-color: black;
+        color: white;
+        transition: 0.8s ease-in-out;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="mynavBar">
+      <div class="myDropdown">
+        <img src="../img/ccitcLogo.png" alt="Icon">
+        <button class="myDropbtn"><span style="font-size:3rem;" class="glyphicon glyphicon-align-justify"><p id="menu">Menu</p> </span></button>
+        <div class="myDropdown-content">
+        <a class="myNav" href="../index.html">Home</a>
+        <a class="myNav" href="../about.html">About</a>
+        <a class="myNav" href="../executives.html">Executive</a>
+        <a class="myNav active" href="../blogs.html">Blogs</a>
+        </div>
+    </div>
+    </div>
+
+    <div id="split-method" style="margin-top:100px; text-align: center;" class="container">
+      <h1 style="font-weight: bold; margin:50px auto;">HOW TO TAKE MULTIPLE INPUT FROM USER IN PYTHON.</h1>
+      <p>Sometimes you may want someone to enter multiple input in one line,like scanf
+         in C++/C you can’t take multiple values using only input() function.
+         To do this you need to use split() method.</p><p style="text-align: justify;">The split method’s syntax :</p>
+         <p style="overflow:auto;"><code>input().split(separator,maxsplit)</code></p>
+         <p>It breaks the given input (string) by the separator. If separator is not given,
+           then it will consider a white-space as separator.
+            Usually this method is used for splitting string.
+           But also helpful for taking multiple input.</p> <br><p> Example:</p>
+
+           <div class="codes">
+            <p style="width: 100%; overflow: auto; white-space: nowrap;"><code id="forCopy">a,b,c=input(<span style="color:black;">"Enter 3 values here: "</span>).split()<br>print(<span style="color:black;">a,b,c</span>)</code></p>
+          </div>
+          <br>
+          <p>Output:<br>Enter 3 values here:1,2,3<br>1,2,3</p>
+          <br>
+          <p style="float:right; font-size: 1.6rem;">by <span style="color: #666699;">Tahamidul Islam Samin</span> <br><br>Published: 28 Jan 2021 </p>
+    </div>
+    <hr/>
+
+    <div id="Default-dictionary" class="container">
+      <h1 style="font-weight: bold; margin:50px auto;">THE USE OF SETDEFAULT DICTIONARY METHOD IN PYTHON</h1>
+      <h3 style="font-weight: bold;">A Dictionary Problem:</h3>
+      <p>Let’s create a function that takes an string as an argument and checks the number of
+         occurrence of each letter in the given string.
+        Finally it returns a dictionary in which each key = a letter
+        and it’s value = number of that letter’s occurrence.</p><br><br><p>Input : “Saam”</p><br><p>Output : { “S”:1, “a”:2, “m”:1}</p>
+        <br><h4 style="font-weight: bold;">Solution 1:</h4>
+
+        <div class="codes">
+         <p style="width: 100%; overflow: auto; white-space: nowrap;"><code id="forCopy"><span style="color:blue;">def</span> <span style="color:skyBlue;">f</span>(string):<br>
+           &ensp; &ensp;count={}
+           <br>&ensp; &ensp;<span style="color:blue;">for</span> ch <span style="color:blue;">in</span> string:
+             <br>&emsp; &emsp; &ensp;<span style="color:blue;">if</span> ch <span style="color:skyBlue;">not</span> in count:
+             <br> &emsp; &emsp; count[ch]=count[ch]+1
+             <br> &emsp; &emsp; &emsp; count[ch]=0
+           <br> &emsp; &ensp; <span style="color:blue;">return</span>(count)</code></p>
+       </div>
+
+       <h4 style="font-weight: bold;">Solution 2:</h4>
+       <p>Before you solve this way, you should learn the use of <span style="color:#286491;">“setdefault”</span> dictionary method. Sometimes we have to set a value in a dictionary for a key only if that key doesn’t already has a value.
+         This method helps to do this just in one line.It takes two argument.
+          For example,if we call dic.setdefault(1st_arg,2nd_arg) ;
+         the 1st argument is the key to check for,and the
+         2nd is the value to set at that key if the key doesn’t already exist.</p>
+
+         <div class="codes">
+          <p style="width: 100%; overflow: auto; white-space: nowrap;"><code id="forCopy"><span style="color:blue;">def</span> <span style="color:skyBlue;">f</span>(string):<br>
+            &ensp; &ensp;count={}
+            <br>&ensp; &ensp;<span style="color:blue;">for</span> ch <span style="color:blue;">in</span> string:
+              <br>&emsp; &emsp; &ensp;count.<span style="color: skyBlue;">setdefault</span>(ch,0)
+              <br> &emsp; &emsp; count[ch]=count[ch]+1
+              <br> &emsp; &ensp; <span style="color:blue;">return</span>(count)</code></p>
+        </div>
+        <p style="float:right; font-size: 1.6rem;">by <span style="color: #666699;">Tahamidul Islam Samin</span> <br><br>Published: 31 Jan 2021 </p>
+    </div>
+    <div class="toggle">
+      <i class="fas fa-toggle-on"><span class="lightMode">ON/OFF</span> </i>
+      <i class="fas fa-toggle-off display-none"><span class="lightMode">ON/OFF</span> </i>
+    </div>
+
+    <script type="text/javascript">
+
+    $('.toggle').click(function() {
+      $('html').toggleClass('darkMode');
+      $('body').toggleClass('darkMode');
+      $('.fa-toggle-off').toggleClass('display-none');
+      $('.fa-toggle-on').toggleClass('display-none');
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CCITC</title>
+    <link rel="icon" type="image/png" href="img/brico.png">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style media="screen">
+      body, html{
+        background-color: white;
+        color: black;
+      }
+      .about-us{
+        padding: 80px 0px 30px 0px;
+        position: relative;
+        background-color: red;
+        color: white;
+        font-family: Merriweather,Helvetica Neue,Arial,sans-serif;
+      }
+      .about-us h1{
+        text-align: center;
+      }
+      .about-us p{
+        text-align: center;
+        width: 80%;
+        margin: 0px auto;
+        font-size: 20px;
+      }
+      .name{
+        font-size: 1.32rem;
+        margin: 10px auto;
+        width: 305px;
+      }
+      @media screen and (min-width:900px) {
+        .about-us p{
+          width: 40%;
+        }
+      }
+      .advisors{
+        text-align: center;
+      }
+      .advisors span{
+        color: grey;
+      }
+      .chief-patron img{
+        border: 8px double #E3E3E3;
+        width: 139px;
+      }
+      .advisors div{
+        padding: 20px;
+        -webkit-box-shadow: 5px 5px 19px 5px #848484;
+        box-shadow: 5px 5px 19px 5px #848484;
+        border-radius: 5px;
+        margin: 40px;
+        display: inline-block;
+      }
+      .chief-advisor img{
+        border: 8px double #E3E3E3;
+      }
+      .chief-advisor .name{padding: 20px 0px;}
+      @media screen and (max-width:420px) {
+        .advisors div{
+            margin: 20px 0px;
+            padding: 0px;
+        }
+        .name{
+          width:270px;
+          font-size: 1rem;
+        }
+      }
+      .lightMode{
+        display: block;
+        font-size: 12px;
+        text-align: center;
+        margin: 4px auto;
+      }
+      .darkMode{
+        background-color: black;
+        color: white;
+        transition: 0.8s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="dropdown">
+        <img src="img/ccitcLogo.png" alt="Icon">
+        <button class="dropbtn"><i class="fas fa-bars"> <p id="menu">Menu</p> </i></button>
+        <div class="dropdown-content">
+        <a class="nav" href="index.html">Home</a>
+        <a class="nav active" href="about.html">About</a>
+        <a class="nav" href="executives.html">Executive</a>
+        <div class="nav morenav"><span>More <i class="fas fa-chevron-down"></i></span>
+          <div id="more-content" class="more-content">
+          <a class="more-nav" href="blogs.html">Blogs</a>
+          <a class="more-nav" href="">Events</a>
+          <a class="more-nav" href="Recruitment.html">Recruitment Form</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="about-us">
+      <h1>ABOUT US</h1>
+      <p>We have a vast area of interest,but we mainly focus on these 4 things
+Programming and Problem solving, IoT and Robotics, Web development and Graphics Designing, Data science and Machine Learning</p>
+</div> <!-- about-us -->
+    <div class="advisors">
+      <div class="chief-patron">
+        <img src="about/principal.jpg" alt="Professor Mohammed Mujibul Haque Chowdury"><br><h2 class="name">Professor Mohammed Mujibul Haque Chowdury (Principal,Chittagong College)</h2><span>CHIEF PATRON</span>
+      </div>
+
+      <div class="chief-advisor">
+        <img src="about/professor.png" alt="Shuvash Chandra Das"><br><h2 class="name">Shuvash Chandra Das (Associate Professor,Chittagong College)</h2>
+        <span>CHEIF ADVISOR</span>  </div>
+    </div><!-- advisors -->
+    <div class="toggle">
+      <i class="fas fa-toggle-on"><span class="lightMode">ON/OFF</span> </i>
+      <i class="fas fa-toggle-off display-none"><span class="lightMode">ON/OFF</span> </i>
+    </div>
+    <div class="copyr8" style="color:white;">
+        <p style="margin:0px;">© developed by CCITC</p>
+    </div>
+
+    <script type="text/javascript">
+    $('.toggle').click(function() {
+      $('html').toggleClass('darkMode');
+      $('body').toggleClass('darkMode');
+      $('.fa-toggle-on').toggleClass('display-none');
+      $('.fa-toggle-off').toggleClass('display-none');
+      });
+    </script>
+  </body>
+</html>

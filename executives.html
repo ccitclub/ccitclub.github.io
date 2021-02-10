@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CCITC</title>
+    <link rel="icon" type="image/png" href="img/brico.png">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style media="screen">
+    /* Executives */
+    body,html{background-color: white}
+    #exce {
+        letter-spacing: 4px;
+        padding: 30px 0px;
+        position: relative;
+        color: white;
+        background-color: red;
+        top: 50px;
+        text-align: center;
+        margin: 10px auto 65px auto;
+    }
+    .exe-desc{
+      position: relative;
+      font-size: 1.2rem;
+      text-align: justify;
+      width: 95%;
+      margin: 0px auto;
+    }
+    *, :after :before{box-sizing: border-box;}
+
+  @media screen and (min-width:975px) {
+    .container{
+      width: 80%;
+      margin: 10px auto;
+    }
+  }
+  .column{
+    -webkit-box-shadow: 5px 5px 19px 5px #848484;
+    box-shadow: 5px 5px 19px 5px #848484;
+    width: 250px;
+    padding-top: 50px;
+    margin: 20px;
+    display: inline-block;
+    position: relative;
+  }
+  @media screen and (max-width:475px) {
+    .column{
+      width: 80%;
+    }
+  }
+  .our-team{font-weight: lighter;}
+  span{
+   color: grey;
+    width: 80%;
+    margin: 0px auto;
+  }
+  .column img{
+    border: 8px double #E3E3E3;
+    width: 200px;
+  }
+  .name{margin: 0px;font-weight: lighter;}
+    </style>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="dropdown">
+        <img src="img/ccitcLogo.png" alt="Icon">
+        <button class="dropbtn"><i class="fas fa-bars"> <p id="menu">Menu</p> </i></button>
+        <div class="dropdown-content">
+        <a class="nav" href="index.html">Home</a>
+        <a class="nav" href="about.html">About</a>
+        <a class="nav active" href="executives.html">Executive</a>
+        <div class="nav morenav"><span>More <i class="fas fa-chevron-down"></i></span>
+          <div id="more-content" class="more-content">
+          <a class="more-nav" href="blogs.html">Blogs</a>
+          <a class="more-nav" href="">Events</a>
+          <a class="more-nav" href="Recruitment.html">Recruitment Form</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+  <h1 id="exce">EXECUTIVES</h1>
+    <div class="container">
+      <div class="exe-desc">
+        Rather than traditional executive posts,CCITC believes in hard work and technology based skills and fortunate to have a group of executive members who have the suitable expertise
+        for their own post and the desire of giving benefits to
+         students who want to do more activities in the field of Computer Technology such as AI,Robotics,Programming etc.
+         other than regular curriculum to extract the hidden talents from them.
+      </div>
+      <h1 class="our-team" >OUR TEAM</h1>
+      <div class="row">
+        <div class="column">
+          <img src="excecutive/siam.jpg" alt="Mamnoon Siam"><br><h2 class="name">Mamnoon Siam</h2><span>PRESIDENT-DEPARTMENT OF PROGRAMMING</span>
+        </div>
+        <div class="column">
+          <img src="excecutive/rubaiyat.jpg" alt="Rubaiyat E Zaman"><br><h2 class="name">Rubaiyat E Zaman</h2><span>SECRETARY-DEPARTMENT OF PROGRAMMING</span>
+        </div>
+        <div class="column">
+          <img src="excecutive/samin.jpg" alt="Tahamidul Islam Samin"><br><h2 class="name">Tahamidul Islam Samin</h2><span>PRESIDENT-DEPARTMENT OF MACHINE LEARNING</span>
+        </div>
+        <div class="column">
+          <img src="excecutive/mahi.jpg" alt="Mahmudul Hasan"><br><h2 class="name">Mahmudul Hasan</h2><span>SECRETARY-DEPARTMENT OF MACHINE LEARNING</span>
+        </div>
+        <div class="column">
+          <img src="excecutive/mushfiq.jpg" alt="Mushfiqur Rahman"><br><h2 class="name">Mushfiqur Rahman</h2><span>PRESIDENT-DEPARTMENT OF ROBOTICS</span>
+        </div>
+        <div class="column">
+          <img src="excecutive/shakib.jpg" alt="Khandakar Shakib"><br><h2 class="name">Khandakar Shakib</h2><span>SECRETARY-DEPARTMENT OF ROBOTICS</span>
+        </div>
+        <div class="column">
+          <img src="excecutive/shafqat.jpg" alt="Shafqat Nawaz"><br><h2 class="name">Shafqat Nawaz</h2><span>PRESIDENT-DEPARTMENT OF WEB AND GRAPHIC DESIGN</span>
+        </div>
+        <div class="column">
+          <img src="excecutive/tahsin.jpg" alt="Tahsin Tajwar"><br><h2 class="name">Tahsin Tajwar</h2><span>SECRETARY-DEPARTMENT OF WEB AND GRAPHIC DESIGN</span>
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+
+    <div class="toggle">
+      <i class="fas fa-toggle-on"><span class="lightMode">ON/OFF</span> </i>
+      <i class="fas fa-toggle-off display-none"><span class="lightMode">ON/OFF</span> </i>
+    </div>
+
+    <div class="copyr8">
+        <p style="margin:0px;">© developed by CCITC</p>
+        <p> <i><q cite="">It's not who we are underneath but what we do that defines us</q> </i></p>
+    </div>
+
+    <script type="text/javascript">
+    $('.toggle').click(function() {
+      $('html').toggleClass('darkMode');
+      $('body').toggleClass('darkMode');
+      $('.name').toggleClass('darkMode');
+      $('.fa-toggle-on').toggleClass('display-none');
+      $('.fa-toggle-off').toggleClass('display-none');
+      $('.container').toggleClass('darkMode');
+      });
+    </script>
+  </body>
+</html>
