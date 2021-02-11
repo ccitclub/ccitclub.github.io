@@ -1,3 +1,7 @@
+$("[style*=red]").attr("style",function(i,style){
+      return style.replace(/\bred\b/g,"blue")
+})
+
 body, html {
       background-color: white;
       height: 100%;
