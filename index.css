@@ -1,5 +1,5 @@
 body, html {
-      background-color: white;
+      background-color: black;
       height: 100%;
       margin: 0;
       font: 400 15px/1.8 "Lato", sans-serif;
@@ -7,7 +7,7 @@ body, html {
 }
 .bgone{
   background-image: url(img/bgimage.png);
-  min-height: 20%;
+  min-height: 50%;
 }
 .bgtwo{
   background-image: url(img/image1.jpg);
@@ -113,7 +113,7 @@ body, html {
 .heading {
     width: 75%;
     font-size: 4rem;
-      margin: 60px auto 0px auto;
+    margin: 60px auto 0px auto;
     }
 }
 
@@ -188,7 +188,7 @@ body, html {
   font-size: 20px;
 }
 .op{
-  color: black;
+  color: transparent;
   position: relative;
     padding: 0px 0px 0px 0px;
     background-color: black;
@@ -258,7 +258,7 @@ body, html {
   .more-content a{
     background-color: rgba(0,0,0,0.6);
     border: 1px solid;
-    width: 135px;
+    width: 100px;
     display: block;
     color: white;
     margin: 0px 0px 0px 0px;
@@ -315,7 +315,7 @@ body, html {
     width: 100%;
 }
 }
-.active{background-color: #B60000;
+.active{background-color: red;
     color: white;}
 
 
@@ -323,22 +323,19 @@ body, html {
     text-align: center;
     background-color: #212529!important;}
 .join-us h1{
-  margin: 0px 0px 40px 0px;
+  margin: 0px 0px 30px 0px;
   text-align: center;
   font-size: 2rem;
   padding: 20px 0px 0px 0px;
 }
-.fb-link{
+.Link{
+  margin: 1px 10px;
   text-decoration: none;
-  background-color: white;
-  color: black;
-  font-size: 100%;
-  padding: 20px;
+  color: white;
   text-align: center;
-  border-radius: 35px;
   transition: 0.5s ease;
-  }
-.fb-link:hover{background-color:#B60000;}
+}
+.fb-link:hover{color:red;}
 .in-touch{
   height: 100%;
   text-align: center;
@@ -365,7 +362,7 @@ body, html {
   transition: 0.5s ease;
 }
 .icon2{margin: 20px 0px 0px 0px;}
-  .email:hover {color:#B60000;}
+  .email:hover {color:red;}
 
 @media screen and (min-width:800px) {
   .icon, .icon2{
@@ -422,7 +419,7 @@ body, html {
   transition: 0.8s ease-in-out;
 }
 .active{
-  background-color: red !important;
+  background-color: rgba(255, 0, 0, 1)!important;
     color: white!important;}
 .colorChng{
   background-color: white;
