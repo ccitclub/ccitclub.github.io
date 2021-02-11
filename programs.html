@@ -10,24 +10,15 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link href="programmes/pgwslideshow.css" rel="stylesheet" />
-    <!--<script src="typed.js"></script> -->
+    <script src="typed.js"></script>
 
     <style media="screen">
-      html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-body {
-  background-color: #eee;
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-      
+      html,body{
+        text-align: center;
+        width: 100%;
+        color: black;
+        background-color: white;
+      }
       .fail-safe{
         font-size: 220%;
         text-align: center;
@@ -49,102 +40,6 @@ body {
           font-size: 150%;
         }
       }
-      @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-
-.grid {
-  display: grid;
-  width: 114em;
-  grid-gap: 6rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  align-items: start;
-}
-
-.grid-item {
-  background-color: #fff;
-  border-radius: 0.4rem;
-  overflow: hidden;
-  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.grid-item:hover {
-  transform: translateY(-0.5%);
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
-}
-
-.card-img {
-  display: block;
-  width: 100%;
-  height: 20rem;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 3rem;
-}
-
-.card-header {
-  font-size: 3rem;
-  font-weight: 500;
-  color: #0d0d0d;
-  margin-bottom: 1.5rem;
-}
-
-.card-text {
-  font-size: 1.6rem;
-  letter-spacing: 0.1rem;
-  line-height: 1.7;
-  color: #3d3d3d;
-  margin-bottom: 2.5rem;
-}
-
-.card-btn {
-  display: block;
-  width: 100%;
-  padding: 1.5rem;
-  font-size: 2rem;
-  text-align: center;
-  color: #3363ff;
-  background-color: #d8e0fd;
-  border: none;
-  border-radius: 0.4rem;
-  transition: 0.2s;
-  cursor: pointer;
-  letter-spacing: 0.1rem;
-}
-
-.card-btn span {
-  margin-left: 1rem;
-  transition: 0.2s;
-}
-
-.card-btn:hover,
-.card-btn:active {
-  background-color: #c2cffc;
-}
-
-.card-btn:hover span,
-.card-btn:active span {
-  margin-left: 1.5rem;
-}
-
-@media only screen and (max-width: 60em) {
-  body {
-    padding: 3rem;
-  }
-
-  .grid {
-    grid-gap: 3rem;
-  }
-}
-
 
     </style>
   </head>
@@ -168,84 +63,19 @@ body {
     </div>
     </div>
 
-   
-    <div class="grid">
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="programmes/img/cprgrmmngclss.jpg" alt="" />
-          <div class="card-content">
-            <h1 class="card-header">Member Recruitment Programme</h1>
-            <p class="card-text">
-              <strong>Chittagong College Information Technology Club</strong> is a platform that will provide students with opportunities to discuss various IT issues outside the classroom and enhance the skills of students other than regular curriculum. Current activities include:
-
-1. Programming and Problem Solving
-2. IoT and Robotics
-3. Web Development and Graphic Design
-4. Data Science and Machine Learning
-
-There will be one class per week for any of the above four topics. To attend the classes being a member is mandatory. So here we announce "Member Recruitment Programme 1.0".If you want to be a member, you must fill out an application form. Membership forms are available from today. Contact your section agent for the membership form. A certain number of applicants will be selected as members. Every selected member will get a confirmation message soon (via SMS/mail).
-              .
-            </p>
-            <button class="card-btn">More <span>&rarr;</span></button>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="card">
-          <img
-            class="card-img"
-            src="programmes/img/cmps-ambssdr.jpg"
-            alt=""
-          />
-          <div class="card-content">
-            <h1 class="card-header">Campus Ambassador Programme</h1>
-            <p class="card-text">
-              We are recruiting <strong>campus Ambassador</strong> from all over Bangladesh.
-
-Benefits:
-1.It would enhance your leadership and communication skills.
-2.You will get free access to our online sessions and premium softwares.
-3.We would showcase your profile on our website.
-
-Eligibilities:
-1.Students from Class 6 to 12 can apply
-2.Should have enough enthusiasm and active participation.
-3.Reliable and committed.
-4.Good communication skills.
-
-Responsibilities:
-1.Promoting CCITC at the respective institution
-2.Partnership with club/forums of the respective institution.
-3.Help to organize workshop at the respective institution.
-4.Encourage students to participate in CCITC events.
-              
-            </p>
-            <button class="card-btn">More <span>&rarr;</span></button>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="card">
-          <img class="card-img" src="programmes/img/givaway.jpg" alt="" />
-          <div class="card-content">
-            <h1 class="card-header">February Book Giveaway</h1>
-            <p class="card-text">
-              Hello Good Fellas,
-Don't miss the oppurtunity to win these amazing books.Participate in this <strong>giveaway</strong> right now.
-To participate :
-1.You have to share this post
-2.Mention at least 1/2 of your friends
-3.Invite at least 20 people to like our page 
-4.Send us your address and phone number or just comment
-Deadline: February 20,2021.
-               
-            </p>
-            <button class="card-btn">More <span>&rarr;</span></button>
-          </div>
-        </div>
-      </div>
+    <div class="animating-slider">
+      <h1 id="programmes">PROGRAMMES /EVENTS</h1>
+      <ul class="pgwSlideshow">
+        <li><img src="programmes/img/prgrmmng-contst.png" alt=""></li>
+        <li><img src="programmes/img/givaway.jpg" alt=""></li>
+        <li><img src="programmes/img/cprgrmmngclss.jpg" alt=""></li>
+        <li><img src="programmes/img/cmps-ambssdr.jpg" alt=""></li>
+        <li><img src="programmes/img/techfest.png" alt=""></li>
+      </ul>
     </div>
-    <!--
+    <div class="fail-safe">
+      UNDER <br>DEVELOPMENT
+    </div>
 
 <style media="screen">
   ul{
@@ -279,5 +109,5 @@ $(function() {
 
         });
   });
-</script> -->
+</script>
     </body>
