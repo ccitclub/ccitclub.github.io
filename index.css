@@ -112,7 +112,8 @@ body, html {
 @media screen and (min-width: 1200px){
 .heading {
     width: 75%;
-    font-size: 4.7rem;
+    font-size: 4rem;
+      margin: 60px auto 0px auto;
     }
 }
 
