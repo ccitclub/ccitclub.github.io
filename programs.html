@@ -47,6 +47,70 @@
           font-size: 150%;
         }
       }
+      :root {
+  --clr-primary: #651fff;
+  --clr-gray: #37474f;
+  --clr-gray-light: #b0bec5;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 2rem;
+  color: var(--clr-gray);
+}
+
+.wrapper-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container {
+  overflow: hidden;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  background-color: white;
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  width: 280px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+
+.profile-img {
+ height: 10rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.description {
+  margin: 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 1rem;
+  background-color: var(--clr-primary);
+}
 
     </style>
   </head>
