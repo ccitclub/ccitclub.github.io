@@ -57,12 +57,12 @@
 }
 
 body {
-  margin-top: 80px;
   color: var(--clr-gray);
   justify-content: center;
 }
 
 .wrapper-flex {
+  margin-top: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -76,9 +76,8 @@ body {
   text-align: center;
   border-radius: 1rem;
   position: relative;
-  width: 280px;
+  max-width: 280px;
   margin-bottom: 1rem;
-  margin-left: center;
   justify-content: center;
   align-items:center;
 }
@@ -98,11 +97,14 @@ body {
 }
 
 .description {
-  margin: 1rem 2rem;
+  height: 100px;
+  margin: 1rem 1.2rem;
   font-size: 0.9rem;
 }
 
 .btn {
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.41); 
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.41);
   cursor: pointer;
   width: 100%;
   border: none;
@@ -111,6 +113,10 @@ body {
   color: red;
   padding: 1rem;
   background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
     </style>
@@ -142,7 +148,7 @@ body {
       <h1 class="name">February Book <br>Giveaway 2021</h1>
       <p class="description">Hello Good Fellas,
 Don't miss the oppurtunity to win these amazing books.Participate in this giveaway right now.
-To participate : 1.You have to share this post
+To participate : 1.You have to share...
 </p>
       <button class='btn'>More </button>
     </div>
@@ -154,7 +160,7 @@ To participate : 1.You have to share this post
       <p class="name">Campus Ambassador Programme 2021</p>
       <p class="description">We are recruiting Campus Ambassador from all over Bangladesh.
 Benefits:
-1.It would enhance your leadership and communication skills.
+1.It would enhance your leadership and communication skills...
 </p>
       <button class='btn'>More</button>
     </div>
