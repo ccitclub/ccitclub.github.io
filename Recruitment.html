@@ -51,20 +51,14 @@
 * {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-  margin: 10;
-  padding: 10;
-  justify-content: center;
 }
 
 body {
   color: var(--clr-gray);
-  justify-content: center;
 }
-
 .wrapper-flex {
-      width: 100%;
+
       margin-top: 80px;
-      display: inline-block;
 }
 
 .container {
@@ -72,15 +66,14 @@ body {
   box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
   background-color: white;
   text-align: center;
-  border-radius: 1rem;
+  border-radius: .1rem;
   position: relative;
   max-width: 40rem;
-  height: 580px;
-  justify-content: center;
-  align-items: center;
+  height: 500px;
   display: inline-block;
   width: 100%;
   margin: 10px 10px 1rem 10px;
+  vertical-align: top;
 }
 
 
@@ -98,9 +91,9 @@ body {
 }
 
 .description {
-  height: 100px;
   margin: 1rem 1.2rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  text-align: justify;
 }
 
 .btn {
@@ -118,12 +111,26 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  transition: 0.5s ease;
 }
 .banner-img{
     overflow:hidden;
     max-height:270px;
 }
 .thisnavbar{
+  font-weight: 600;
+}
+.fullpage{
+  height: auto;
+  overflow: visible;
+  padding: 0px 0px 50px 0px;
+}
+.form-link{
+  background-color: red;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
   font-weight: 600;
 }
     </style>
@@ -140,30 +147,14 @@ body {
         <div class="nav morenav"><span>More <i class="fas fa-chevron-down"></i></span>
           <div id="more-content" class="more-content">
           <a class="more-nav" href="blogs.html">Blogs</a>
-          <a class="more-nav" href="programs.html">Programmes</a>
-          <a class="more-nav active" href="Recruitment.html">Join Us</a>
+          <a class="more-nav active" href="programs.html">Programmes</a>
+          <a class="more-nav" href="Recruitment.html">Join Us</a>
         </div>
         </div>
         </div>
     </div>
     </div>
     <div class="wrapper-flex">
-
-    <div class="container">
-      <div class='banner-img'>
-        <img  style="max-width: 100%;
-        height: auto;" src='programmes/img/cmps-ambssdr.jpg' class="profile-img"></div>
-      <p class="name">Campus Ambassador Programme 2021</p>
-      <p class="description">We are recruiting Campus Ambassador from all over Bangladesh.<br>
-        Benefits:</br>
-        1.It would enhance your leadership and communication skills.</br>
-        2.You will get free access to our online sessions and premium softwares.</br>
-        3.We would showcase your profile on our website.</br>
-        <br>
-        Eligibilities:.....
-      </p>
-      <a href="#"><button class='btn'>More</button></a>
-    </div>
 
       <div class="container">
       <div class='banner-img'>
@@ -173,10 +164,45 @@ body {
       <p class="description">There will be one class per week for any of the above four topics. To attend the classes being a member is mandatory. So here we announce "Member Recruitment Programme 1.0".If you want to be a member, you must fill out an application form.
         Membership forms are available from today. Contact your section agent for the
         membership form. A certain number of applicants will be selected as members.
-        Every selected member will get a confirmation message soon (via SMS/mail)...</p>
-      <a href='Membership-form.html'><button class='btn'>More</button></a>
+        Every selected member will get a confirmation message soon (via SMS/mail).</br>
+        Current activities include:
+        <br>
+      1. Programming and Problem Solving<br>
+      2. IoT and Robotics<br>
+      3. Web Development and Graphic Design<br>
+      4. Data Science and Machine Learning<br><br>
+      <a class="form-link" href="Membership-form.html">Here's the form</a></p>
+      <button class='btn'>More</button>
+
     </div>
 
+    <div class="container">
+      <div class='banner-img'>
+        <img  style="max-width: 100%;
+        height: auto;" src='programmes/img/cmps-ambssdr.jpg' class="profile-img"></div>
+      <p class="name">Campus Ambassador Programme 2021</p>
+      <p class="description">
+            We are recruiting Campus Ambassador from all over Bangladesh.
+            Benefits:<br>
+            1.It would enhance your leadership and communication skills.<br>
+             2.You will get free access to our online sessions and premium softwares.<br>
+             3.We would showcase your profile on our website.<br>
+            <br>
+            Eligibilities:<br>
+            1.Students from Class 6 to 12 can apply.<br>
+             2.Should have enough enthusiasm and active participation.<br>
+             3.Reliable and committed.<br>
+             4.Good communication skills.<br>
+            <br>
+            Responsibilities:<br>
+            1.Promoting CCITC at the respective institution.<br>
+            2.Partnership with club/forums of the respective institution.<br>
+            3.Help to organize workshop at the respective institution.<br>
+            4.Encourage students to participate in CCITC events.<br><br>
+            <a class="form-link" href="Ambassador-form.html">Here's the form</a></p>
+            <button class='btn'>More</button>
+    </div>
+  </div>
 <script src="programmes/pgwslideshow.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function() {
@@ -192,6 +218,13 @@ $(function() {
             }
 
         });
+  });
+
+  $('.btn').click(function(){
+    $(this).parent().toggleClass('fullpage');
+     $(this).text(function(i, v){
+              return v === 'More' ? 'Less' : 'More'
+           })
   });
 </script>
     </body>
