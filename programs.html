@@ -23,7 +23,7 @@
       .fail-safe{
         font-size: 220%;
         text-align: center;
-        padding-top: 70px;
+        padding-top: 70px 0px 0px 0px;
         /* display: none; */
       }
       #programmes{
@@ -126,6 +126,67 @@ body {
 .thisnavbar{
   font-weight: 600;
 }
+
+    .text-slider{
+      bottom: 50%;
+      left: 50%;
+    }
+    .text-editor-wrap {
+      display: block;
+      margin: 0px auto;
+      padding: 25vh 0% 0px 0%;
+      max-width: 530px;
+      border-radius: 10px;
+      clear: both;
+      overflow: hidden;
+      -webkit-transition: all 0.5s ease-out;
+      -moz-transition: all 0.5s ease-out;
+      -ms-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
+    }
+    @media screen and (max-width:520px) {
+      .text-editor-wrap{
+        width: 95%;
+        font-size: .8rem!important;
+      }
+    }
+    .title-bar {
+    padding: 5px 0;
+    font-family: "Lucida Grande", sans-serif;
+    font-size: 0.75em;
+    text-align: center;
+    text-shadow: rgb(255 255 255 / 80%) 0px 1px 0px;
+    background-color: #f8f8f8;
+    background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
+    background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
+    background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
+    box-shadow: inset rgb(255 255 255 / 70%) 0px 1px 1px;
+    border-bottom: #6a6a6a 1px solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    }
+    .text-body {
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 10px;
+    color: whitesmoke;
+    text-shadow: #000 0px 1px 0px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 1.35em;
+    line-height: 1.40em;
+    font-weight: 500;
+    text-align: left;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    }
+    .text-slider-items{
+      display: none;
+    }
     </style>
   </head>
   <body>
@@ -147,10 +208,23 @@ body {
         </div>
     </div>
     </div>
-    <div class="fail-safe">
-      UNDER DEVELOPMENT
 
-    </div>
+      <span class="text-slider-items">
+           Hello World!_ ?
+           Unfortunately this section is under development ?
+           Assalamu Alaikum... ?
+        </span>
+
+    <div class="text-editor-wrap">
+      <div class="title-bar">
+        <span>CCITC Terminal 80x40</span>
+      </div><!-- title-bar  -->
+      <div class="text-body">
+        >>
+        <strong class="text-slider"></strong>
+      </div><!-- text-body  -->
+    </div><!-- test-editor-wrap  -->
+
     <!-- <div class="wrapper-flex">
     <div class="container">
 
@@ -224,5 +298,17 @@ $(function() {
 
         });
   });
+
+  if($('.text-slider').length==1){
+    var typed_strings=$('.text-slider-items').text();
+
+    var typed = new Typed('.text-slider',{
+      strings: typed_strings.split('?'),
+      typeSpeed: 40,
+      loop: true,
+      backDelay: 800,
+      backSpeed: 20,
+    });
+  }
 </script>
     </body>
