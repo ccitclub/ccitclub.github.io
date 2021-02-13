@@ -188,11 +188,59 @@ body, html {
   font-size: 20px;
 }
 .op{
-  color: transparent;
   position: relative;
     padding: 0px 0px 0px 0px;
     background-color: black;
     z-index: 5;
+  }
+  .slideshow div{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .slide-img{
+    position: relative;
+    max-height: 400px;
+    text-align: center;
+  }
+  div .hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 27px;
+    text-align: center;
+    display: none;
+    margin: 0px auto;
+    width: 100%;
+    color: white;
+    vertical-align: bottom;
+    background-color: rgba(255,0,0,0.4);
+    animation: faded 0.7s ease;
+  }
+  .slick-slide:hover .hover{
+    display: block;
+  }
+  @keyframes faded {
+    from{opacity: 0;}
+    to{opacity: 1;}
+  }
+  @media screen and (max-width:500px) {
+    div .hover{font-size: 11px;}
+  }
+  @media screen and (max-width:670px) {
+    .slide-img{
+      max-height: 56vw;
+    }
+  }
+  .slideshow{
+    background-color: black;
+    position: relative;
+    margin: 0px auto;
+    text-align: center;
+    text-align: -webkit-center;
   }
 .chart-section{
   font-family: Open Sans,Helvetica Neue,Arial,sans-serif;
@@ -206,9 +254,6 @@ body, html {
   text-align: center;
 }
 #piechart{width: 100%;}
-
-.ns-img .hover{animation: faded .7s ease;}
-
 
 @media screen and (min-width:764px) {
 
@@ -258,7 +303,7 @@ body, html {
   .more-content a{
     background-color: rgba(0,0,0,0.6);
     border: 1px solid;
-    width: 135px;
+    width: 145px;
     display: block;
     color: white;
     margin: 0px 0px 0px 0px;

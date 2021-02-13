@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html class="html" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,8 +8,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="index.css">
-    <link href="ninja-slider/ninja-slider.css" rel="stylesheet" />
-    <script src="ninja-slider/ninja-slider.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="programmes/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="programmes/slick-theme.css"/>
+    <script type="text/javascript" src="programmes/slick.js"></script>
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <script src="typed.js"></script>
 
@@ -27,7 +27,6 @@
       .animatag{
         font-size: .8rem;
       }
-
     }
     .typing{
       display: none;
@@ -55,7 +54,7 @@
     </div>
     <div id="home" class="bgone">
       <div class="caption">
-        <h1 class="heading">CHITTAGONG COLLEGE <br> INFORMATION TECHNOLOGY CLUB</h1>
+        <h1 class="heading">CHITTAGONG COLLEGE <br> INFORMATION TECHNOLOGY CLUB (CCITC)</h1>
         <span class="typing"> >>Hello World!_?
         >>Welcome to the official site of CCITC</span>
         <div class="animatag">
@@ -84,34 +83,28 @@
     </div>
 
     <div class="op">
-      <div id='ninja-slider'>
-          <div>
-              <div class="slider-inner">
-                  <ul>
-                      <li><a class="ns-img" href="img/image4.jpg">
-                      <div class="hover"><p>Our's</p><h1 style="margin:0px;">MULTIMEDIA CLASSROOM</h1></div> </a></li>
-                      <li><a class="ns-img" href="img/image6.jpg">
-                      <div class="hover"><p>Our's Alternative</p><h1 style="margin:0px;">MULTIMEDIA CLASSROOM</h1></div> </a></li></a></li>
-                      <li><a class="ns-img" href="img/image1.jpg">
-                      <div class="hover"><p>Meanwhile</p><h1 style="margin:0px;">TAKING A CLASS</h1></div> </a></li></a></li></a></li>
-                      <li><a class="ns-img" href="img/image8.jpg">
-                      <div class="hover"><p>Preparing</p><h1 style="margin:0px;">SLIDES and ANALYSING ALL THE DATA</h1></div> </a></li></a></li></a></li>
-                      <li><a class="ns-img" href="img/image3.jpg">
-                      <div class="hover"><p></p><h1 style="margin:0px;">WORKSHOP</h1></div></a></li></a></li>
-                      <li><a class="ns-img" href="img/image2.jpg">
-                      <div class="hover"><p>Co-founder's</p><h1 style="margin:0px;">WITH CHIEF-INSTRUCTOR</h1></div></a></li>
-                      <li><a class="ns-img" href="img/image10.jpg">
-                      <div class="hover"><p>Rountinely</p><h1 style="margin:0px;">TAKING CLASSES OF ON DIFFERENT TOPICS</h1></div></a></li></a></li>
-                      <li><a class="ns-img" href="img/image12.jpg">
-                      <div class="hover"><p>Rountinely</p><h1 style="margin:0px;">TAKING CLASSES OF ON DIFFERENT TOPICS</h1></div></a></li></a></li>
-                      <li><a class="ns-img" href="img/image13.jpg">
-                        <div class="hover"><p>WORKSHOP</p><h1 style="margin:0px;">ON MICROCONTROLLERS AND ARDUINO</h1></div></a></li></a></li>
-                  </ul>
-                  <div class="fs-icon" title="Expand/Close"></div>
-              </div>
-          </div>
+      <div class="slideshow">
+        <div> <img class="slide-img" data-lazy="img/image4.jpg" alt="">
+          <div class="hover"><p>Our's</p><h1 style="margin:0px;">MULTIMEDIA CLASSROOM</h1></div> </div>
+        <div><img class="slide-img" data-lazy="img/image6.jpg" alt="">
+        <div class="hover"><p>Our's Alternative</p><h1 style="margin:0px;">MULTIMEDIA CLASSROOM</h1></div> </div>
+        <div><img class="slide-img" data-lazy="img/image1.jpg" alt="">
+        <div class="hover"><p>Meanwhile</p><h1 style="margin:0px;">TAKING A CLASS</h1></div> </div>
+        <div><img class="slide-img" data-lazy="img/image8.jpg" alt="">
+        <div class="hover"><p>Preparing</p><h1 style="margin:0px;">SLIDES and ANALYSING ALL THE DATA</h1></div> </div>
+        <div><img class="slide-img" data-lazy="img/image3.jpg" alt="">
+        <div class="hover"><p></p><h1 style="margin:0px;">WORKSHOP</h1></div> </div>
+        <div><img class="slide-img" data-lazy="img/image2.jpg" alt="">
+          <div class="hover"><p>Co-founder's</p><h1 style="margin:0px;">WITH CHIEF-INSTRUCTOR</h1></div> </div>
+        <div><img class="slide-img" data-lazy="img/image10.jpg" alt="">
+        <div class="hover"><p>Rountinely</p><h1 style="margin:0px;">TAKING CLASSES OF ON DIFFERENT TOPICS</h1></div> </div>
+        <div><img class="slide-img" data-lazy="img/image12.jpg" alt="">
+        <div class="hover"><p>Rountinely</p><h1 style="margin:0px;">TAKING CLASSES OF ON DIFFERENT TOPICS</h1></div> </div>
+        <div><img class="slide-img" data-lazy="img/image13.jpg" alt="">
+        <div class="hover"><p>WORKSHOP</p><h1 style="margin:0px;">ON MICROCONTROLLERS AND ARDUINO</h1></div> </div>
       </div>
     </div>
+
     <div class="bgthree">
       <div class="chart-section">
         <h1 class="stresponse">Student's Response</h1><hr style="background-color: white; margin:0px auto; color: white; width:70px;">
@@ -151,8 +144,7 @@
         <p style="margin:0px;">© developed by CCITC</p>
     </div>
 
-    <script type="text/javascript" src="index.js">
-    </script>
+    <script type="text/javascript" src="index.js"></script>
   <!-- CODED BY KHANDAKAR SHAKIB AND SHAFQAT NAWAZ -->
   </body>
 </html>
