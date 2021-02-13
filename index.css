@@ -247,7 +247,9 @@ body, html {
     position: relative;
     margin: 0px auto;
     text-align: center;
-    text-align: -webkit-center;
+    text-align: -moz-center;
+    text-align: -ms-center;
+    text-align: -o-center;
   }
 .chart-section{
   font-family: Open Sans,Helvetica Neue,Arial,sans-serif;
