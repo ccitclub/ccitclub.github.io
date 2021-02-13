@@ -1,4 +1,18 @@
   // CODED BY KHANDAKAR SHAKIB
+  $( window ).on('load',function() {
+    $('.loading-icon').fadeOut('slow');
+  });
+
+  $(document).ready(function(){
+    $('.slideshow').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+       lazyLoad: 'ondemand',
+    });
+
+  });
 
       if($('.animate').length==1){
         var typed_strings=$('.typing').text();
