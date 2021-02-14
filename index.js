@@ -1,15 +1,25 @@
   // CODED BY KHANDAKAR SHAKIB
- 
- $(document).ready(function(){
+
+  $(document).ready(function(){
     $('.slideshow').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
        lazyLoad: 'ondemand',
+       autoplay: true,
+       autoplaySpeed: 2000,
     });
 
   });
+
+    var slowLoad = window.setTimeout( function() {
+    $('.chart-section').css('display', 'none');
+    $('.bgthree').css('min-height', 'auto');
+    $(".slow-net-txt").css('display', 'block');
+  }, 55000 );
+
+  window.addEventListener( 'load', function() {
+      window.clearTimeout( slowLoad );
+  }, false );
 
       if($('.animate').length==1){
         var typed_strings=$('.typing').text();
@@ -115,14 +125,14 @@
 
               chart.draw(data, options);
             }
-        
-         $( window ).on('load',function() {
-          $('.loading-icon').fadeOut('slow');
-          });
-        
+            $( document ).on('load',function() {
+              $('.loading-icon').fadeOut('slow');
+            });
+
             $(window).resize(function(){
              drawChart1();
               drawChart();
+
 
         });
 

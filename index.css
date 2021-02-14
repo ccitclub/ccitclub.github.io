@@ -190,11 +190,12 @@ body, html {
 .loading-icon{
       width: 25%;
       border-radius: 50%;
-      filter: invert(1);
       margin: 0px auto;
+      filter: invert(1);
   }
 .op{
-  position: relative;
+    text-align: center;
+    position: relative;
     padding: 0px 0px 0px 0px;
     background-color: black;
     z-index: 5;
