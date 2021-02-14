@@ -188,10 +188,9 @@ body, html {
   font-size: 20px;
 }
 .loading-icon{
-      width: 40%;
+      width: 25%;
       border-radius: 50%;
-      background-color: whitesmoke;
-      z-index: 9999;
+      filter: invert(1);
       margin: 0px auto;
   }
 .op{
