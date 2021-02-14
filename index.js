@@ -1,9 +1,6 @@
   // CODED BY KHANDAKAR SHAKIB
-  $( window ).on('load',function() {
-    $('.loading-icon').fadeOut('slow');
-  });
-
-  $(document).ready(function(){
+ 
+ $(document).ready(function(){
     $('.slideshow').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -118,6 +115,11 @@
 
               chart.draw(data, options);
             }
+        
+         $( window ).on('load',function() {
+          $('.loading-icon').fadeOut('slow');
+          });
+        
             $(window).resize(function(){
              drawChart1();
               drawChart();
