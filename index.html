@@ -38,7 +38,7 @@
     }
        .AI{
          z-index: 100;
-        max-width: 280px;
+        max-width: 285px;
         position: fixed;
         bottom: 10%;
         right: 3%;
@@ -57,12 +57,14 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
-       
+
       .club-ai{
         display: none;
+        overflow: hidden;
+        height: 80px;
        }
     </style>
-     
+
   </head>
   <body>
     <div class="navbar thisnavbar">
@@ -96,7 +98,7 @@
 
    <div class="who-r-we">
       <h1 style=" text-align: center;font-size:2.5rem;">Who are we?</h1>
-     
+
 <hr style="background-color: white; margin:20px auto; color: white; width:70px;">
 
       <p>Chittagong College Information Technology Club(CCITC) is a platform which will provide students with opportunities to
@@ -186,7 +188,7 @@
       </div>
 
   <script type="text/javascript" src="index.js"></script>
-  
+
 
     <script>
     $(document).ready(function(){
@@ -195,11 +197,14 @@
 
             },1000 );
             $('#avatar').on('click',function(){
-              $('.club-ai').slideToggle();
+              if ($('.club-ai').hasClass('ok')==1) {
+                  $('.club-ai').slideToggle();
+              }
+              $('.club-ai').css('height', 'auto').addClass('ok');
             });
         });
 
      </script>
   <!-- CODED BY KHANDAKAR SHAKIB AND SHAFQAT NAWAZ -->
   </body>
-</html>
+</html
