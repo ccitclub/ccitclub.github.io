@@ -36,38 +36,32 @@
     .typing{
       display: none;
     }
+       .AI{
+        max-width: 280px;
+        position: fixed;
+        bottom: 10%;
+        right: 3%;
+      }
+      #avatar{
+        border: 3px ridge #B20000;
+        cursor: pointer;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-image: url(club-ai.gif);
+        position: fixed;
+        bottom: 2%;
+        right: 3%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+       
+      .club-ai{
+        display: none;
+       }
     </style>
-    
-    
-   <!-- Start of Async Drift Code -->
-  <script>
-  "use strict";
-
-  !function() {
-    var t = window.driftt = window.drift = window.driftt || [];
-    if (!t.init) {
-      if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-      t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-      t.factory = function(e) {
-        return function() {
-          var n = Array.prototype.slice.call(arguments);
-          return n.unshift(e), t.push(n), t;
-        };
-      }, t.methods.forEach(function(e) {
-        t[e] = t.factory(e);
-      }), t.load = function(t) {
-        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-        var i = document.getElementsByTagName("script")[0];
-        i.parentNode.insertBefore(o, i);
-      };
-    }
-  }();
-  drift.SNIPPET_VERSION = '0.3.1';
-  drift.load('xe5i993uup4s');
-  </script>
-  <!-- End of Async Drift Code -->
-    
+     
   </head>
   <body>
     <div class="navbar thisnavbar">
@@ -183,11 +177,28 @@
     <div class="copyr8">
         <p style="margin:0px;">© developed by CCITC</p>
     </div>
-
-   
+   <div class="AI">
+        <div class="club-ai">
+          <iframe id="club-ai" width="280" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/1a9f3e5e-1a8d-4ca5-a22f-82e51e55a6f6"></iframe>
+        </div>
+        <span id="avatar"></span>
+      </div>
 
   <script type="text/javascript" src="index.js"></script>
   
+
+    <script>
+    $(document).ready(function(){
+          window.setTimeout( function() {
+              $('.club-ai').css('display','block');
+
+            },1000 );
+            $('#avatar').on('click',function(){
+              $('.club-ai').slideToggle();
+            });
+        });
+
+     </script>
   <!-- CODED BY KHANDAKAR SHAKIB AND SHAFQAT NAWAZ -->
   </body>
 </html>
