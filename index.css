@@ -353,7 +353,7 @@ body, html {
 }
 }
 
-@media screen and (max-width:340px) {
+@media screen and (max-width:368px) {
   .dropdown-content {
     top: 50px;
   }
