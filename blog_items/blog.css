@@ -76,7 +76,7 @@ html,  body{
   font-size: 10px;
   font-family: -webkit-pictograph;
 }
-@media screen and (max-width:340px) {
+@media screen and (max-width:368px) {
   .myDropdown-content {
     top: 50px;
   }
