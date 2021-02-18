@@ -191,7 +191,7 @@ body, html {
       width: 25%;
       border-radius: 50%;
       margin: 0px auto;
-      filter: invert(1);
+      filter: invert(0);
   }
 .op{
     text-align: center;
