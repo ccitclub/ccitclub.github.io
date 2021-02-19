@@ -55,7 +55,7 @@ html,body{
      margin:50px auto 10px auto;
   }
   .blog-intro h1{
-    padding: 90px 0px 0px 0px;
+    padding: 100px 0px 0px 0px;
     margin-top: 0px;
     background: #FFFFFF;
     background: #FFFFFF;
@@ -157,6 +157,9 @@ html,body{
   .fulcontainer .justify{
     text-align: right;
     margin-top: 50px;
+  }
+  .fulcontainer img{
+    max-width: 100%;
   }
   code {
   padding: 2px 4px;
