@@ -27,6 +27,7 @@
       window.addEventListener('DOMContentLoaded', init)
 
         window.setTimeout(function(){
+          $('loading').css('display','none');
           $('.seemore-button').on('click',function(){
             $('.full-blog').css('display','block');
             $('.button-grp,.blogpost').css('display','none');
