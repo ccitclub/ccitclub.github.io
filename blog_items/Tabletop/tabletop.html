@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tabletop.js</title>
+  </head>
+  <body>
+    <script type="text/javascript" src="main.js"></script>
+    <!--https://docs.google.com/spreadsheets/d/e/2PACX-1vR_fEPTiELcOfFL7KSc7gVVUtIlU4zI4JcruCtJELmLQgK9r8Jhbz0WbboZORk5W-VeqrplbWmnYZUx/pubhtml-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+<script type='text/javascript'>
+  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1j6rp3AF0PUs2uPA2IJxBuszBIc64XY1WNVJAK6NB4rI/edit?usp=sharing';
+
+  function init() {
+    Tabletop.init( { key: publicSpreadsheetUrl,
+                     callback: showInfo,
+                     simpleSheet: true } )
+  }
+
+  function showInfo(data, tabletop) {
+    // alert('Successfully processed!')
+    // console.log(data);
+    data.forEach(function(data) {
+      var Murder=[data.Murder];
+      // ++data.Kidnapping_and_Abduction+data.Robbery+data.Arson+data.Hurt+data.Other_Crimes_Against_SCs
+      var WomenAssult=[data.Assault_on_women];
+      console.log();
+    });
+
+  }
+
+  window.addEventListener('DOMContentLoaded', init)
+</script>
+  </body>
+</html>

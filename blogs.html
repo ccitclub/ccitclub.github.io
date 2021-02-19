@@ -7,158 +7,74 @@
     <title>CCITC</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="icon" type="image/png" href="img/brico.png">
     <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="blog_items/blog.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+    <script type="text/javascript" src="blog_items/Tabletop/main.js"></script>
+
   </head>
 
   <body>
 
-    <div class="mynavBar">
-      <div class="myDropdown">
-        <img src="img/ccitcLogo.png" alt="Icon">
-        <button class="myDropbtn"><i class="fas fa-bars"> <p id="menu">Menu</p> </i></button>
-        <div class="myDropdown-content">
-        <a class="myNav" href="index.html">Home</a>
-        <a class="myNav" href="about.html">About</a>
-        <a class="myNav" href="executives.html">Executives</a>
-        <div class="myNav morenav"><span>More <i class="fas fa-chevron-down"></i></span>
-          <div id="more-content" class="more-content">
-          <a class="more-nav active" href="blogs.html">Blogs</a>
-          <a class="more-nav" href="programs.html">Programmes</a>
-          <a class="more-nav myNav" href="Recruitment.html">Join Us</a>
+    <div class="navbar thisnavbar">
+
+      <div class="search">
+        <div class="search-item">
+          <i class="fas fa-search"></i><input id="SearchBar" type="text" name="search bar" placeholder="Search">
         </div>
+        <hr style="margin:2px auto;">
+      </div>
+
+      <div class="dropdown">
+        <img src="img/ccitcLogo.png" alt="ccitc Icon">
+        <button class="dropbtn"><i class="fas fa-bars"> <p id="menu">Menu</p> </i></button>
+        <div class="dropdown-content">
+        <a class="nav" href="index.html">Home</a>
+        <a class="nav" href="about.html">About</a>
+        <a class="nav" href="executives.html">Executive</a>
+        <div class="nav morenav"><span>More <i class="fas fa-chevron-down"></i></span>
+            <div id="more-content" class="more-content">
+            <a class="more-nav active" href="blogs.html">Blogs</a>
+            <a class="more-nav" href="Programs.html">Programs</a>
+            <a class="more-nav" href="Recruitment.html">Join Us</a>
+          </div>
         </div>
         </div>
     </div>
     </div>
+
 
     <div class="container-fluid">
       <div class="blog-intro">
         <h1>BLOGS</h1>
+        <div class="button-grp">
+
+        <button id="All" class="active-bttn bttn" type="button" name="All">All</button>
+        <button id="Programming" class="bttn" type="button" name="Programming">Programming</button>
+        <button id="Robotics" class="bttn" type="button" name="Robotics">Robotics</button>
+        <button id="Web" class="bttn" type="button" name="Web">Web Desigining</button>
+        <button id="Machine_Learning" class="bttn" type="button" name="Ml">Machine Learning</button>
+        <button id="Art" class="bttn" type="button" name="Art">Art</button>
+        <button id="Other" class="bttn" type="button" name="Other">Other</button>
       </div>
 
-          <div class="buttons-container">
-            <div class="sorting-container">
-              <div class="button-group sort-by-button-group">
-                Sort By	<span class="arrow">&#9660;</span>
-                <button class="button is-checked" data-sort-value="original-order">Original Order</button>
-                <button class="button" data-sort-value="name">Name</button>
-                <button class="button" data-sort-value="catagory">Catagory</button>
-                <button class="button" data-sort-value="number">Date</button>
-              </div>
-            </div>
+        <div id="blogging" class="blogpost">
 
-            <div class="filter-container">
-              <div id="filters" class="button-group"> Filter <span class="arrow">&#9660;</span> <button class="button is-checked" data-filter="*">All</button>
-                <button class="button" data-filter=".Programming">Programming</button>
-                <button class="button" data-filter=".Robotics">Robotics</button>
-                <button class="button" data-filter=".Machine_Learning">Machine Learning</button>
-                <button class="button" data-filter=".HTML">Web Desigining</button>
-                <button class="button" data-filter=".Art">Art</button>
-              </div>
+        </div>
+        <div class="with-button">
+          <button class="X" type="button" name="button">X</button>
+          <div class="full-blog">
 
-            </div>
-         </div>
-
-
-       <div id="myDIV" class="blogpost">
-         <div  class="row new-grid">
-            <a href="blog_items/shakib.html"><div id="sakib" class="element-item Robotics" data-category="Robotics">
-               <h3 class="blog-head">How and how not to...</h3>By <span class="name">Khandakar Shakib</span><br><p class="number">27 Jan 2021<br> <span class="catagory">Robotics</span></p>
-               <img class="blog-img img-thumbnail" src="blog_items/blog-img/r-img.jpg" alt="Electronics & Robotics">
-               <p style="height:100px; margin-bottom: 0px; overflow:hidden; font-weight:bold;">রোবটিক্স, শব্দটি শুনলেই অধিকাংশের মাথায় বড় কোনো রোবট কিংবা Sci-fi গল্পের কোনো স্মার্ট রোবটের কথাই মাথায় ভাসে। আমাদের অনেকেই যখন কোনো সায়েন্স প্রজেক্ট দেখি কিংবা কোনো Homemade DIY ভিডিও দেখি, অনেকেই সেটি তৈরির কৌশল জানার জন্যে আগ্রহী</p> <span class="more">{...} </span>
-           </div></a>
-
-           <div id="shakib" class="element-item Robotics" data-category="Robotics">
-           <h3 class="blog-head">The Walking Robot</h3>By <span class="name">Khandakar Shakib</span><br><p class="number">29 Jan 2021<br> <span class="catagory">Robotics</span></p>
-           <img class="blog-img img-thumbnail" src="blog_items/blog-img/Walkingbot.gif" alt="The Walking Robot">
-           <p style="height:100px; overflow:hidden; margin-bottom: 0px;font-weight:bold;">4 servo motors and an Arduino nano were mainly used for building it. It can somewhat dance too. You can find the tutorial on my youtube channel Project Grievous <a style="color: red;" href="https://www.youtube.com/watch?v=FhTWF1Qr5Ys&feature=youtu.be">Click Here</a></p>
-           </div>
-
-
-       <a href="blog_items/samin.html"><div id="samin" class="element-item Programming" data-category="Programming">
-         <h3 class="blog-head">HOW TO TAKE MULTIPLE INPUT FROM USER IN PYTHON.</h3>By <span class="name">Tahamidul Islam Samin</span><br><p class="number">28 Jan 2021<br> <span class="catagory">Programming(Python)</span></p>
-           <p style="overflow:hidden; margin-bottom: 0px;font-weight:bold;">Sometimes you may want someone to enter multiple input in one line,like scanf in C++/C you can’t take multiple values using only input() function. To do this you need to use split() method.
-             <br>The split method’s syntax :
-            <br> &emsp;<code style="overflow:scroll;">input().split(separator,maxsplit)</code>
-            <br>It breaks the given input (string) by the separator.If separator is not given,then it will consider a white-space as separator. Usually this method is used for splitting string. But also helpful for taking multiple input.</p> <span class="more">{...} </span>
-            </div></a>
-
-
-        <a href="blog_items/samin.html#Default-dictionary"><div id="samin" class="element-item Programming" data-category="Programming">
-          <h3 class="blog-head">THE USE OF SETDEFAULT DICTIONARY METHOD IN PYTHON</h3>By <span class="name">Tahamidul Islam Samin</span><br><p class="number">31 Jan 2021<br> <span class="catagory">Programming(Python)</span></p>
-          <h3 style="font-weight: bold;">A Dictionary Problem:</h3>
-            <p style="overflow:hidden; margin-bottom: 0px;font-weight:bold;">Let’s create a function that takes an string as an argument and checks the number of
-               occurrence of each letter in the given string.
-              Finally it returns a dictionary in which each key = a letter
-              and it’s value = number of that letter’s occurrence.</p><br><p>Input : “Saam”</p><br><p>Output : { “S”:1, “a”:2, “m”:1}</p>
-              <h4 style="font-weight: bold;">Solution 1:</h4> <span class="more">{...} </span>
-             </div></a>
-
-         </div>
-       </div>
-       <div class="toggle">
-         <i class="fas fa-toggle-on"><span class="lightMode">ON/OFF</span> </i>
-         <i class="fas fa-toggle-off display-none"><span class="lightMode">ON/OFF</span> </i>
-       </div>
-
+          </div>
+        </div>
       </div>
 
-     <script>
-     $(window).on('load', function() {
-       var $grid = $('.new-grid').isotope({
-       itemSelector: '.element-item',
-       layoutMode: 'fitRows',
-       getSortData: {
-         name: '.name',
-         number: '.number Date.parse',
-         category: '[data-category]',
-         }
-       });
+      <script type="text/javascript" src="blog_items/sheets.js"></script>
+      <script>
 
-           var filterFns = {
-       // show if number is greater than 50
-       numberGreaterThan50: function() {
-         var number = $(this).find('.number').text();
-         return Date.parse( number);
-       }
-       };
-
-       // bind filter button click
-       $('#filters').on( 'click', '.button', function() {
-         var filterValue = $( this ).attr('data-filter');
-         // use filterFn if matches value
-         filterValue = filterFns[ filterValue ] || filterValue;
-         $grid.isotope({ filter: filterValue });
-
-       });
-
-       // bind sort button click
-       $('.sort-by-button-group').on( 'click', '.button', function() {
-       var sortValue = $(this).attr('data-sort-value');
-       $grid.isotope({ sortBy: sortValue });
-       });
-
-       // change is-checked class on buttons
-       $('.button-group').each( function( i, buttonGroup ) {
-       var $buttonGroup = $( buttonGroup );
-       $buttonGroup.on( 'click', '.button', function() {
-         $buttonGroup.find('.is-checked').removeClass('is-checked');
-         $( this ).addClass('is-checked');
-       });
-       });
-       $('.toggle').click(function() {
-         $('body').toggleClass('darkMode');
-         $('.element-item').toggleClass('darkMode');
-         $('.fa-toggle-on').toggleClass('display-none');
-         $('.fa-toggle-off').toggleClass('display-none');
-       });
-     });
 
      </script>
 
