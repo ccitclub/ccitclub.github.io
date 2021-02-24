@@ -55,7 +55,7 @@ html,body{
      margin:50px auto 10px auto;
   }
   .blog-intro h1{
-    padding: 100px 0px 0px 0px;
+    padding: 120px 0px 0px 0px;
     margin-top: 0px;
     background: #FFFFFF;
     background: #FFFFFF;
@@ -73,7 +73,7 @@ html,body{
       width: 100%;
       text-align: justify;
       text-align-last: center;
-      margin: 0px auto;
+      margin: 20px auto 0px auto;
   }
   .bttn {
       display: inline-block;
@@ -91,6 +91,28 @@ html,body{
     color: #b20000;
     background-color: white;
 }
+.arrow{
+  font-size: 1.2rem;
+  margin: 0px auto 10px auto;
+  padding: 10px 20px;
+  background-color: #b20000;
+  color: white;
+  display: none;
+  border-radius: 20%/50%;
+}
+@media screen and (max-width:490px) {
+  .arrow{display: inline-block;}
+  .bttn{
+    z-index: 10;
+    position: relative;
+    display: none;
+    width: 100%;
+  }
+  .display{
+    display: block;
+  }
+  .arrow{cursor: pointer;}
+ }
 .search-item{
   width: 50%;
   margin: 0px auto;
@@ -102,7 +124,10 @@ html,body{
 #SearchBar[placeholder]{
   font-weight: bolder;
   font-size: 1.2rem;
+  padding: 2px 0px 2px 10px;
+  border-radius: 5%/80%;
 }
+#SearchBar:focus{outline: none;}
 #SearchBar{
   border: 2.1px solid #b20000;
   font-weight: normal;
@@ -168,6 +193,12 @@ html,body{
   background-color: #f9f2f4;
   border-radius: 4px;
 }
+codeContainer{
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+}
+
 .codes {
   overflow: auto;
   min-width: 100%;
@@ -182,9 +213,6 @@ html,body{
     }
     .blog-container {
       width: 99%;
-    }
-    .bttn {
-        font-size: 0.6rem;
     }
     .with-button button {
       font-size: 2.1rem;
@@ -203,8 +231,11 @@ html,body{
       #SearchBar{
         width: 80%;
       }
+      .search-item {
+      width: 100%;
+      }
     }
-  @media screen and (max-width: 350px){
+  @media screen and (max-width: 368px){
   .navbar {
       height: 94px;
       width: 100%;

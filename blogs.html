@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CCITC-Blog</title>
+    <title>CCITC</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -23,17 +23,31 @@
       z-index: 100;
       left: 0%;
       }
+      #blog-submit{
+        cursor: pointer;
+        max-width: 500px;
+        font-size: 1.2rem;
+        margin: 0px auto 10px auto;
+        padding: 10px 20px;
+        background-color: #b20000;
+        color: white;
+        border-radius: 12%/50%;
+      }
       loading img{
-      position: relative;
-      max-width: 180px;
-      top: 40%;
-      left: -3%;
+        position: absolute;
+        max-width: 180px;
+        top: 40%;
+        left: 40%;
       }
-      @media screen and (max-width: 368px){
-      .dropdown-content {
-        top: 94px;
+      @media (max-width:500px) {
+        loading img{
+          position: absolute;
+          max-width: 180px;
+          top: 40%;
+          left: 20%;
+        }
       }
-      }
+
     </style>
   </head>
 
@@ -71,8 +85,9 @@
     <div class="container-fluid">
       <div class="blog-intro">
         <h1>BLOGS</h1>
+        <a style="text-decoration:none;" href="uploading-blog.html" target="_blank"> <span id="blog-submit">Submit your project</span></a>
         <div class="button-grp">
-
+        <span class="arrow">Categories +</span>
         <button id="All" class="active-bttn bttn" type="button" name="All">All</button>
         <button id="Programming" class="bttn" type="button" name="Programming">Programming</button>
         <button id="Robotics" class="bttn" type="button" name="Robotics">Robotics</button>
@@ -95,7 +110,9 @@
 
       <script type="text/javascript" src="blog_items/sheets.js"></script>
       <script>
-
+      $('.arrow').click(function(){
+        $('.bttn').toggleClass('display');
+      })
 
      </script>
 

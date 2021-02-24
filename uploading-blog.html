@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CCITC</title>
+    <link rel="icon" type="image/png" href="img/brico.png">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="blog_items/Autocomplete/autocomplete.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="blog_items/Autocomplete/autocomplete.css">
+    <style>
+    html, body{
+      width: 100%;
+      font-family: Montserrat,Oswald,Fraunces,sans-serif;
+    }
+    body{
+      margin: 0px auto;
+      width: 97%;
+    }
+    li{
+      font-weight: bolder;
+      font-family: system-ui;
+      margin: 3px 0px;
+    }
+    .head{
+      margin: 0px auto;
+    }
+    .head h1{
+      margin: 0px 0px -20px 0px;
+      text-align: center;
+      background-color: #b20000;
+      color: white;
+      padding: 20px 0px 30px 0px;
+      font-weight: bolder;
+    }
+    .head p{
+      font-family: system-ui;
+      text-align: justify;
+      font-size: 1.1rem;
+    }
+    .head p a{
+      text-decoration: none;
+      font-weight: bolder;
+    }
+    .color{
+      color: red;
+    }
+    .darkrd{
+      color: darkred;
+      background-color: rgba(255, 0, 255,0.2);
+    }
+    textarea{
+      display: block;
+      margin: 5px 0px 20px 0px;
+      width: 97%;
+      border: 3px solid #b20000;
+      resize: vertical;
+      min-height: 150px;
+      outline: none;
+      overflow: auto;
+    }
+    input{
+      border-radius: 4%/50%;
+      display: block;
+      margin: 5px 0px 20px 0px;
+      height: 40px;
+      width: 97%;
+      border: 3px solid #b20000;
+    }
+    input:focus{outline: none;}
+    #submit-blog{
+      cursor: pointer;
+      background-color: #b20000;
+      font-size:1.4rem;
+      color: white;
+      height: 40px;
+      width: 100px;
+      display: block;
+      margin: 10px 0px 0px 0px;
+    }
+    .form{
+      max-width: 700px;
+      padding: 12px;
+      margin: 0px auto;
+      background-color: white;
+      -webkit-box-shadow: 0px 0px 4px 0px #6F6F6F;
+      box-shadow: 0px 0px 4px 0px #6F6F6F;
+    }
+    #file{
+      border-radius: 0px;
+      border: none;
+      height: 40px;
+    }
+    .g-recaptcha{
+      margin: 50px 0px;
+    }
+  @media screen and (max-width: 500px){
+        .head p{
+          font-size: .91rem;
+        }
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <h1 style="margin-bottom: auto;">INSTRUCTIONS</h1>
+      <p>A <a href="https://en.wikipedia.org/wiki/Blog" target="_blank">blog</a> is a discussion or informational website published on the World Wide Web consisting of discrete,
+        often informal diary-style text entries (posts). Members and Executives can upload their contents here. If you have any projects, contents, or articles, try submitting them here.
+         Show them to the world. We will look into your posts and upload them on the site. If you have any questions regarding it, please contact the club executives.</p>
+        <p><strong>Note:Use HTML markdowns</strong></p><p>You can add more than some plain texts and image, You can also use <span class="color">html tags</span> to make your blogs look interesting and attractive.
+          Or you can just write normally and let us do the tagging.
+          <p>If don't know about html tags, it's alright. Here are some basic html tags(along with some custom tags of our own) that you can use.</p>
+        <li><strong> <span class="darkrd"> &lt;h2&gt;</span> "WRITE SUB-HEADING HERE" <span class="darkrd">&lt;/h2&gt;</span></strong></li>
+        <li><strong> <span class="darkrd"> &lt;p&gt;</span> "WRITE PARAGRAPH HERE" <span class="darkrd"> &lt;/p&gt;</span></strong></li>
+        <li><strong> <span class="darkrd">&lt;code&gt;</span> "IF YOUR BLOG CONTAINS ANY CODES. WRITE PROGRAMMING CODES/ SYNTAX HERE USE IT FOR EACH LINES OF CODE" <span class="darkrd">&lt;/code&gt;</span></strong></li>
+        <li><strong> <span class="darkrd"> &lt;codeContainer&gt;</span> "A CONTAINER OR A BLOCK THAT CONTAINS ALL YOUR CODE IF YOU HAVE MULTIPLE LINES OF CODE. WRITE ALL YOUR CODES ALONG WITH THE &lt;code&gt&lt;/code&gt; FOR EACH LINE " <span class="darkrd">&lt;/codeContainer&gt;</span></strong></li>
+        <li><strong> <span class="darkrd"> &lt;strong&gt;</span> "TEXTS BETWEEN THIS TAG BECOMES BOLDER" <span class="darkrd">&lt;/strong&gt;</span></strong></li>
+        <li><strong> <span class="darkrd"> &lt;br&gt;</span> TEXTS AFTER THIS TAG ARE ADDED IN THE NEXT LINE(In short breaks the line)</strong></li>
+        <li><strong> <span class="darkrd"> &lt;span class="redtxt" &gt;</span> "TEXTS BETWEEN THIS TAG BECOMES RED IN COLOR" <span class="darkrd">&lt;/span&gt;</span></strong></li>
+        <li><strong> <span class="darkrd"> &lt;strong&gt;</span> "TEXTS BETWEEN THIS TAG BECOMES BOLDER" <span class="darkrd">&lt;/strong&gt;</span></strong></li>
+        <li><strong> <span class="darkrd"> &lt;li&gt;</span> "USE IT TO LIST ITEMS. USE IT FOR EVERY ITEMS YOU PREFER TO BE LISTED." <span class="darkrd">&lt;/li&gt;</span></strong></li>
+        <li><strong> <span class="darkrd"> &lt;sup&gt;</span> "DEFINES SUPERSCRIPTED TEXT." <span class="darkrd">&lt;/sup&gt;</span></strong> example:<span style="color: blue;"> X&lt;sup&gt;2&lt;/sup&gt; = X<sup>2</sup> </span></li>
+          <li><strong> <span class="darkrd"> &lt;sub&gt;</span> "DEFINES SUBSCRIPTED TEXT." <span class="darkrd">&lt;/sub&gt;</span></strong> example:<span style="color: blue;"> CO&lt;sub&gt;2&lt;/sub&gt; = CO<sub>2</sub> </span></li>
+      </p>
+      <h1>Submit your Project</h1>
+    </div>
+
+  <form class="form"id="blogForm" autocomplete = "off" method="post" action="https://script.google.com/macros/s/AKfycbzdrxQLjcmCTXj1jHvRnfoW2QR8vD4RHEyxLXvJPwuvc6G8p_XOx18ypw/exec">
+    <input type="hidden" id="fileContent" name="fileContent" value="">
+    <input type="hidden" id="filename" name="filename" value="">
+
+      <label for="name">Name:</label><br>
+      <input id="name" type="text" placeholder="Your Name" name="name" pattern="[A-Za-z0-9]+" required/>
+      <label for="email">Email:</label><br>
+      <input id="email" type="email" name="email" placeholder="Your Email" required />
+      <label for="title">Title of your project</label><br>
+      <input id="title" type="title" name="title" placeholder="Title of your project" required />
+      <label for="file">Choose a great cover image for your project (Optional)</label><br>
+      <input id="file" name="file" type="file" accept="image/*">
+      <label for="description">Description:</label>
+      <div class="autocomplete"><textarea name="description" id="description"></textarea></div>
+      <div class="g-recaptcha" data-sitekey="6Lc492QaAAAAALSOaUMqyJbSfQd3vDSmXNwRc0Z3"></div>
+
+      <button id="submit-blog" type="button" onclick="uploadFile()">Submit</button>
+    </form>
+
+    <script>
+    function uploadFile(){
+      var reader = new FileReader();
+      var file = document.getElementById('file').files[0];
+      reader.onload = function(){
+        document.getElementById('fileContent').value=reader.result;
+        document.getElementById('filename').value=file.name;
+        document.getElementById('blogForm').submit();
+      }
+      reader.readAsDataURL(file);
+    }
+    var tags = ["<sub></sub>","<sup></sup>","<h1></h1>", "<h2></h2>","<p></p>","<code></code>","<codeContainer></codeContainer>","<li></li>","<br>","<i></i>",'<span class="redtxt"></span>'];
+    autocomplete(document.getElementById("description"), tags);
+    </script>
+
+  </body>
+</html>
