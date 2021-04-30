@@ -20,7 +20,10 @@
           }
           console.log(need);
           for (var i = need.length - 1; i >= 0; i--) {
-              (document).getElementById('blogging').innerHTML+='<div class="blog-container '+need[i][2] +'"><div class="element-item"><div id="'+ i +'" class="container"><span class="date">'+need[i][1]+'</span>'+need[i][3]+ '<br>'+'<p class="justify">'+ need[i][0]+ '<br> <span class="silver">' +need[i][2]+'</span></p>'+ '<br>' +need[i][4]+ '<br>' +need[i][5]+ '<br></div></div><button class="seemore-button"> Continue Reading...</button></div>';
+              (document).getElementById('blogging').innerHTML+= `<div class="blog-container ${need[i][2]}"><div class="element-item">
+              <div id="${i}" class="container"><span class="date">${need[i][1]}</span>${need[i][3]} <br> <p class="justify"> ${need[i][0]} 
+              <br> <span class="silver"> ${need[i][2]}</span></p> <br> ${need[i][4]} <br> ${need[i][5]} <br></div></div><button class="seemore-button"> 
+              Continue Reading...</button></div>'`;
           }
         })
       }
