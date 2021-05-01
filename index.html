@@ -101,15 +101,22 @@
         </div>
         </div>
     </div>
+    
+    <div class="display-grid">
+      <div class="who-r-we">
+        <h2 style=" text-align: center;font-size:2.5rem;">Who are we?</h2>
+        <hr style="background-color: white; margin:20px auto; color: white; width:70px;">
+        <p>Chittagong College Information Technology Club(CCITC) is a platform which will provide students with opportunities to
+          discuss various IT issues outside the classroom and to enhance skills of students other than regular curriculum and also giving benefits to them who wants to do more activities in the field of Computer Technology such as AI, Robotics, Programming, etc.
+         to extract the hidden talents from them.</p>
+      </div>
 
-   <div class="who-r-we">
-      <h2 style=" text-align: center;font-size:2.5rem;">Who are we?</h2>
-
-<hr style="background-color: white; margin:20px auto; color: white; width:70px;">
-
-      <p>Chittagong College Information Technology Club(CCITC) is a platform which will provide students with opportunities to
-        discuss various IT issues outside the classroom and to enhance skills of students other than regular curriculum and also giving benefits to them who wants to do more activities in the field of Computer Technology such as AI, Robotics, Programming, etc.
-       to extract the hidden talents from them.</p>
+      <div class="intro-video">
+        <video autoplay muted controls loop>
+          <source src="https://ccitclub.github.io/database/videos/ccitc-intro.mp4" />
+        your browser may not support videos.
+        </video>
+      </div>
     </div>
 
     <div class="bgtwo">
@@ -208,6 +215,31 @@
               $('.club-ai').css('height', 'auto').addClass('ok');
             });
         });
+      
+        var videos = document.getElementsByTagName("video");
+        function checkScroll() {
+            var fraction = 0.8; // Play when 80% of the player is visible.
+            for(var i = 0; i < videos.length; i++) {
+                var video = videos[i];
+                var x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w, //right
+                    b = y + h, //bottom
+                    visibleX, visibleY, visible;
+
+                    visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+                    visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+
+                    visible = visibleX * visibleY / (w * h);
+
+                    if (visible > fraction) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+          }
+      }
+window.addEventListener('scroll', checkScroll, false);
+window.addEventListener('resize', checkScroll, false);
+
 
      </script>
   <!-- CODED BY KHANDAKAR SHAKIB AND SHAFQAT NAWAZ -->
