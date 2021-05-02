@@ -138,7 +138,18 @@
         <p> <i><q cite="">It's not who we are underneath but what we do that defines us</q> </i></p>
     </div>
 
-    <script type="text/javascript">
+     <script type="text/javascript">
+      let darkMode = localStorage.getItem('DarkMode') || false;
+      darkMode = darkMode == 'false'||darkMode == false ? false: true;
+      console.log(darkMode)
+      if(darkMode==true){
+        $('html').addClass('darkMode');
+      $('body').addClass('darkMode');
+      $('.name').addClass('darkMode');
+      $('.fa-toggle-on').toggleClass('display-none');
+      $('.fa-toggle-off').toggleClass('display-none');
+      $('.container').addClass('darkMode');  
+    }
     $('.toggle').click(function() {
       $('html').toggleClass('darkMode');
       $('body').toggleClass('darkMode');
@@ -146,6 +157,9 @@
       $('.fa-toggle-on').toggleClass('display-none');
       $('.fa-toggle-off').toggleClass('display-none');
       $('.container').toggleClass('darkMode');
+      darkMode = !darkMode
+      console.log(!darkMode)
+      localStorage.setItem('DarkMode', darkMode)
       });
     </script>
   </body>
