@@ -132,12 +132,23 @@ Programming and Problem solving, IoT and Robotics, Web development and Graphics 
         <p style="margin:0px;">© developed by CCITC</p>
     </div>
 
+    
     <script type="text/javascript">
+      let darkMode = localStorage.getItem('DarkMode') || false;
+      darkMode = darkMode == 'false'||darkMode == false ? false: true;
+      if(darkMode==true){
+      $('html').addClass('darkMode');
+      $('body').addClass('darkMode');
+      $('.fa-toggle-on').toggleClass('display-none');
+      $('.fa-toggle-off').toggleClass('display-none');  
+      }
     $('.toggle').click(function() {
       $('html').toggleClass('darkMode');
       $('body').toggleClass('darkMode');
       $('.fa-toggle-on').toggleClass('display-none');
       $('.fa-toggle-off').toggleClass('display-none');
+      darkMode = !darkMode
+      localStorage.setItem('DarkMode', darkMode)
       });
     </script>
   </body>
