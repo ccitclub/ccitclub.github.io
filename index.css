@@ -156,10 +156,22 @@ body, html {
   margin: 30px 5%;
   font-size: 70px;
 }
-.skill-icons{height: 600px;}
-.ml{
-    display: inline-block;
-  }
+.skill-icons {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding:3rem 0rem 9rem 0rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.ml {
+    transition: 0.8s ease;
+    margin: 30px 5%;
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+}
 @media screen and (max-width:415px) {
   .skill-icons i{
     margin: 9px 4%;
@@ -444,7 +456,6 @@ body, html {
     background-color: black;
   text-align: center;}
 .ml{
-  line-height: 1px;
   transition: 0.8s ease;
 }
 .ml img{
@@ -476,7 +487,7 @@ body, html {
   bottom: 2%;
   right: 5%;
 }
-.fa-toggle-on{color:black;}
+.fa-toggle-on{color:#444040;}
 .lightMode {
   display: block;
   font-size: 12px;
