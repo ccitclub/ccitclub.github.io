@@ -13,7 +13,8 @@
     "who_are_we": {
         "head": "Who are we ?",
         "content": "Chittagong College Information Technology Club(CCITC) is a platform which will provide students with opportunities to discuss various IT issues outside the classroom and to enhance skills of students other than regular curriculum and also giving benefits to them who wants to do more activities in the field of Computer Technology such as AI, Robotics, Programming, etc. to extract the hidden talents from them.",
-        "video": "https://ccitclub.github.io/database/videos/ccitc-intro.mp4"
+        "video": "https://ccitclub.github.io/database/videos/ccitc-intro.mp4",
+        "poster": "/assets/img/ccitc_og.webp"
     },
     "carousel": [
         {"src":"/assets/img/image6.webp", "alt":"CCITC image 6", "text":"Our alternative. MULTIMEDIA CLASSROOM"},

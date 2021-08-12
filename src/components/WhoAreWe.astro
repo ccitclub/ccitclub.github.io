@@ -11,9 +11,9 @@ const {whoAreWe} = Astro.props;
     </main>
 
     {whoAreWe?.video ? (<div data-sal="slide-up" data-sal-duration="1500" class="intro-video">
-            <video autoplay="true" muted="true" controls="true" loop="true">
-            <source src={whoAreWe?.video}>
-            your browser may not support videos.
+            <video preload="none" poster={whoAreWe?.poster} autoplay="true" muted="true" controls="true" loop="true" playsinline>
+                <source src={whoAreWe?.video}  type="video/mp4">
+                your browser may not support videos.
             </video>
         </div>): <img src="https://ccitclub.github.io/database/videos/CCITC%20INTRO.webp" alt="CCITC Intro" />}
 </section>
