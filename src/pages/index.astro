@@ -1,0 +1,108 @@
+---
+// Component Imports
+import Data from '/assets/data.json';
+import GlobalData from '/assets/global.json';
+
+import Nav from '../components/Nav.astro';
+import MainHead from '../components/MainHead.astro';
+import WhoAreWe from '../components/WhoAreWe.astro';
+import Activities from '../components/Activities.astro';
+import Carousel from '../components/Carousel.astro';
+import ChartAndContact from '../components/ChartAndContact.astro';
+import ClubAI from '../components/ClubAI.astro';
+import Footer from '../components/Footer.astro';
+
+const {logo, META} = await GlobalData;
+const {homeBg,head,subhead, who_are_we, activitiesBg,
+piechart, barchart, carousel,chartBg,contacts, meta} = await Data;
+
+const parallax = `
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  `
+
+let title = 'CCITC';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title}</title>
+    <meta name="keywords" content={META?.keyword}>
+    <meta name="description" content={META?.description}>
+    <meta property="og:title" content={meta?.ogtitle}>
+    <meta property="og:image" content={META?.ogimage}>
+    <meta property="og:description" content={META?.description}>
+    <link rel="icon" type="image/svg+xml" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/global.css">
+    <link rel="stylesheet" href="/style/sal.css">
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/splide.min.css">
+    <script src="/js/index.js" type="module" defer></script>
+    <script src="/js/main.js" type="module" defer></script>
+
+</head>
+<body>
+    <main>
+        <Nav logo={logo} showBgColor={true}/>
+        <MainHead subhead={subhead} parallax={parallax+`background-image: url(${homeBg});`} head={head}/>
+        <WhoAreWe whoAreWe={who_are_we}/>
+        <Activities parallax={parallax+`background-image: url(${activitiesBg});`}/>
+        <Carousel carousel={carousel}/>
+        <ChartAndContact parallax={parallax + `background-image: url(${chartBg})`} parallax2={parallax + `background-image: url(${homeBg});`}
+            barchart={barchart} piechart={piechart} contacts={contacts}/>
+        <Footer/>
+        <ClubAI/>
+        <!--
+           - You can also use imported framework components directly in your markup!
+           -
+           - Note: by default, these components are NOT interactive on the client.
+           - The `:visible` directive tells Astro to make it interactive.
+           -
+           - See https://docs.astro.build/core-concepts/component-hydration/ 
+           -->
+
+    </main>
+
+    <script>
+    var videos = document.getElementsByTagName("video");
+    
+    window.addEventListener('scroll', checkScroll, false);
+    window.addEventListener('resize', checkScroll, false);
+       
+async function checkScroll() {
+    var fraction = 0.8; // Play when 80% of the player is visible.
+    for(var i = 0; i < videos.length; i++) {
+        var video = videos[i];
+        let x = video.offsetLeft;
+        let y = video.offsetTop;
+        let w = video.offsetWidth;
+        let h = video.offsetHeight;
+        let r = x + w; //right
+        let b = y + h; //bottom
+        let visibleX, visibleY, visible;
+
+        visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+        visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+        visible = visibleX * visibleY / (w * h);
+
+        if (visible > fraction) {
+            await video.play().catch(err => console.log(err));
+        }
+      }
+    }
+
+
+    </script>
+</body>
+</html>

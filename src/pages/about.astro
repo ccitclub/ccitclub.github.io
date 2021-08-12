@@ -1,0 +1,105 @@
+---
+import Nav from '../components/Nav.astro';
+import DarkMode from '../components/darkmode.astro';
+import Data from '/assets/about.json';
+import globalData from '/assets/global.json';
+
+const {logo, META} = await globalData;
+const { description, people, meta } = await Data;
+const title = 'CCITC -About';
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title}</title>
+    <meta name="keywords" content={META?.keyword}>
+    <meta name="description" content={META?.description}>
+    <meta property="og:title" content={meta?.ogtitle}>
+    <meta property="og:image" content={META?.ogimage}>
+    <meta property="og:description" content={META?.description}>
+    <link rel="icon" type="image/svg+xml" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/global.css">
+    <script src="/js/index.js" type="module" defer></script>
+    <style>
+.relative-height {
+    position: relative;
+    height: 100%;
+}
+main {    display: grid;}
+footer {
+    width: 100%;
+    text-align: center; background-color: black;
+    color: var(--light-text);
+}
+.About .heading {
+    padding-top: 80px;
+}
+.heading h1 {
+    background-color: var(--ccitc-background);
+    color: var(--light-text);
+}
+.heading_description {
+    max-width: 700px;
+    padding: 1rem 0.5rem;
+    margin: 2vw auto;
+    line-height: 1.6;
+
+}
+.advisors {
+    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 1vw;
+    align-items: stretch;
+    padding: 5vw 0 10vw 0;
+}
+.advisor img {
+    max-height: 143px;
+    border: 2px double lightgray;
+    margin: 0 auto;
+}
+.advisor {
+    padding: 5%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #00000080;
+}
+@media (max-width: 400px) {
+    .advisors {
+        grid-template-columns: auto;
+    }
+}
+</style>
+</head>
+
+<body class="mode">
+    <main class="About relative-height" style="background: inherit;">
+    <Nav logo={logo}/>
+    <div class="heading">
+        <h1 class="text-center py-1">About</h1>
+    </div>
+    <p class="heading_description text-center">
+    {description}
+     </p>
+     <div class="advisors grid-center-all">
+        {
+            people ? people.map(u => (
+                <div class="advisor text-center">
+                    <img src={u?.image} alt={u?.name} />
+                    <h3 class="py-1">{u?.name}</h3>
+                    <span class="pb-1">{u?.position}</span>
+                </div>
+            )): ''
+        }
+     </div>
+     <DarkMode />
+        <footer>
+            <p>© <time>{new Date().getUTCFullYear()}</time> &nbsp; Developed by CCITC</p>
+        </footer>
+    </main>
+</body>
+</html>

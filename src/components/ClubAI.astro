@@ -1,0 +1,76 @@
+---
+
+---
+
+<div class="AI">
+    <div class="club-ai initial-height hide">
+        <iframe id="club-ai" width="280" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/1a9f3e5e-1a8d-4ca5-a22f-82e51e55a6f6"></iframe>
+    </div>
+    <span id="avatar"></span>
+</div>
+
+<style>
+ .AI{
+    z-index: 100;
+    max-width: 285px;
+    position: fixed;
+    bottom: 100px;
+    right: 3%;
+    transition: all 1s linear;
+}
+#avatar{
+    border: 3px ridge #B20000;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url(https://ccitclub.github.io/database/img/clubAi.webp);
+    position: fixed;
+    bottom: 2%;
+    right: 3%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.club-ai{
+    transition: all 0.6s ease-in;
+    overflow: hidden;
+}
+#club-ai{
+    transition: all 1s ease-in;
+}
+.initial-height {
+    height: 80px;
+}
+.toggle-height {display: none;}
+
+.full-height {height: 100%;}
+
+</style>
+
+<script>
+const ClubAi = document.querySelector('.club-ai')
+ready(() => {
+        if(localStorage.getItem('InitialAIShow') == 'true') {
+            ClubAi.classList.remove('initial-height');
+            ClubAi.classList.toggle('toggle-height');
+        }
+        ClubAi.classList.remove('hide')
+})
+
+document.getElementById('avatar').onclick = ()=> {
+    if(ClubAi.classList.contains('initial-height')) {
+        ClubAi.classList.remove('initial-height');
+        localStorage.setItem('InitialAIShow', true);
+    } else
+        ClubAi.classList.toggle('toggle-height');
+}
+
+function ready(fn) {
+  if (document.readyState != 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+</script>

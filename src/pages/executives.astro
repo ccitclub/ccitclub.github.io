@@ -1,0 +1,90 @@
+---
+import globalData from '/assets/global.json';
+import Data from '/assets/executives.json';
+import Nav from '../components/Nav.astro';
+import DarkMode from '../components/darkmode.astro';
+
+const {logo, META} = await globalData;
+const {title, description, executives, meta} = await Data;
+
+const DELAY = 200; //Slide up animation delay
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title}</title>
+    <meta name="keywords" content={META?.keyword}>
+    <meta name="description" content={description}>
+    <meta property="og:title" content={meta?.ogtitle}>
+    <meta property="og:image" content={META?.ogimage}>
+    <meta property="og:description" content={description}>
+    <link rel="icon" type="image/svg+xml" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/sal.css">
+    <link rel="stylesheet" href="/style/global.css">
+    <script src="/js/index.js" type="module" defer></script>
+    <style>
+    main {
+        background: inherit;
+    }
+    .wrapper {
+        padding-top: 80px;
+        margin: 0 auto;
+    }
+    .sub_title {
+        max-width: 1200px;
+        line-height: 1.5;
+        margin: 0 auto;
+    }
+    .title {
+        background-color: var(--ccitc-background);
+        color: var(--light-text);
+    }
+    .executives {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1vw;
+         max-width: 1200px;
+        margin: 0 auto;
+    }
+    .executive {padding: 0.5rem;}
+    .executive img {
+        width: 100%;
+        max-width: 500px;
+    }
+    .post {filter: contrast(0.7);}
+    footer { background-color: black; color: var(--light-text); }
+    .quote {font: .7rem;}
+    </style>
+</head>
+
+<body class="mode">
+<main>
+<Nav logo={logo}/>
+<section class="wrapper text-center">
+<h1 class="py-2 title">CONTEMPORARY EXECUTIVES</h1>
+<div class="py-2 sub_title">{description}</div>
+<container class="executives grid-center-all py-1">
+{
+    executives ? executives.map((executive, i) => (
+        <div data-sal="slide-up" data-sal-duration="500" data-sal-delay={DELAY*i} class="executive glass-container">
+            <img src={executive.image} alt={executive.name}/>
+            <h3 class="py-1">{executive.name}</h3>
+            <p class="post">{executive.post}</p>
+        </div>
+    )) : ''
+}
+</container>
+<footer>
+    <p class="pb-1">© <time>{new Date().getUTCFullYear()}</time> &nbsp; Developed by CCITC</p>
+    <p class="quote"> <i><q cite="">It's not who we are underneath but what we do that defines us</q> </i></p>
+</footer>
+</section>
+<DarkMode />
+</main>
+</body>
+
+</html>

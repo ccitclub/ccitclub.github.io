@@ -1,0 +1,17 @@
+{
+    "meta": {
+        "ogtitle": "CCITC -About",
+        "ogimage": "/assets/img/ccitc_og.webp"
+    },
+    "description": "We have a vast area of interest,but we mainly focus on these 4 things Programming and Problem solving, IoT and Robotics, Web development and Graphics Designing, Data science and Machine Learning",
+    "people": [{
+        "name": "Professor Mohammed Mujibul Haque Chowdury (Principal, Chittagong College)",
+        "position": "CHIEF PATRON",
+        "image": "/assets/img/principal.webp"
+        },
+        {
+            "name": "Shuvash Chandra Das (Associate Professor, Chittagong College)",
+            "position": "CHIEF ADVISOR",
+            "image": "/assets/img/professor.webp"
+        }]
+}

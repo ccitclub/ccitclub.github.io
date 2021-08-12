@@ -1,0 +1,61 @@
+---
+const {carousel} = Astro.props;
+---
+
+<section id="Gallary" class="carousel">
+    <div id="image-slider" class="splide">
+	    <div class="splide__track">
+            <ul class="splide__list text-center">
+        {
+            carousel ? carousel.map(image => (
+                <li class="splide__slide">
+                    <div class="caption flex-center-all flex-row">
+                        <h4>{image?.text.split('.')[0]}</h4>
+                        <h3>{image?.text.split('.')[1]}</h3>
+                    </div>
+				    <img class="slide__show__img" src={image?.src} alt={image?.alt} />
+			    </li>
+            )): ''
+        }
+            </ul>
+        </div>
+    </div>
+</section>
+
+<style>
+.carousel {
+    background-color: black;
+}
+.caption {
+    opacity: 0;
+    background-color: #b200008a;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem 1vw;
+    width: 100%;
+    color: white;
+    height: 100%;
+    gap: 1vw;
+}
+.caption:hover {opacity: 1;}
+.caption h3 {
+    font-size: clamp(1.5rem, 5vw, 2.4rem);
+    max-width: 700px;
+}
+.caption h4 {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    max-width: 700px;
+}
+.splide__slide {position: relative;}
+.slide__show__img {
+    max-height: 500px;
+    height: 100%;
+}
+@media (max-width:850px) {
+.slide__show__img {
+    max-height: 300px;
+}   
+}
+</style>

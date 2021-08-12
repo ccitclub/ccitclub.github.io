@@ -1,0 +1,47 @@
+.container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1vw;
+    align-items: flex-start;
+    max-width: 1000px;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+.title {
+    background: var(--ccitc-background);
+    color: var(--light-text);
+}
+.poster img  {
+    max-width: 100%;
+    height: 320px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner {
+    overflow: hidden;
+    max-height: 270px;
+}
+.item_description {
+    font-family: 'Lato', 'san-serif';
+    white-space: break-spaces;
+    font-size: clamp(0.9rem, 5vw, 1.1rem);
+    line-height: 1.5;
+    padding: 2px;
+    text-align: justify;
+    overflow-y: hidden;
+    max-height: 210px;
+    text-overflow: ellipsis;
+}
+.poster {
+background: #90909038;
+display: grid;
+text-align: center;
+padding: 15px 10px;
+}
+.form-link {
+    text-decoration: inherit;
+    background: #ff000094;
+    padding: 5px;
+    line-height: 4;
+    border-radius: 5px;
+}

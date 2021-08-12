@@ -1,0 +1,34 @@
+---
+const TOC = [
+    {text: 'Top', href:"#Home"},
+    {text: 'About us', href:"#About_us"},
+    {text: 'Activities', href:"#Activities"},
+    {text: 'Gallary', href:"#Gallary"},
+    {text: 'Student\'s response', href:"#Response"},
+    {text: 'Join us', href:"#Join_us"},
+]
+---
+
+<footer class="text-center">
+    <container class="py-1">
+        <h4>Table of content</h4>
+        <div class="pb-2 pt-1">
+            {
+                TOC.map(content => (
+                    <a href={content.href} class="m-1 p-1">{content.text}</a>
+                ))
+            }
+        </div>
+    </container>
+    <p>© {new Date().getUTCFullYear()} &nbsp; Developed by CCITC</p>
+</footer>
+
+<style>
+
+footer {
+    background-color: var(--dark-text);
+    color: var(--light-text);
+    padding: .5rem 0;
+}
+a {text-decoration: none;}
+</style>

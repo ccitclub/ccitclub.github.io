@@ -1,0 +1,46 @@
+{
+    "title": "CCITC",
+    "meta": {
+        "keyword": "CCITC, Chittagong College, Chittagong College Information Technology Club, IT",
+        "description": "Chittagong College Information Technology Club(CCITC) is a platform which will provide students with opportunities to...",
+        "ogtitle": "CCITC, Chittagong College, Chittagong College Information Technology Club"
+    },
+    "head":"Chittagong College Information and Technology Club (CCITC)",
+    "subhead": "> Hello world...! > Welcome to the official site of CCITC",
+    "homeBg": "/assets/img/bg_img.webp",
+    "activitiesBg": "/assets/img/image1.webp",
+    "chartBg": "/assets/img/image8.webp",
+    "who_are_we": {
+        "head": "Who are we ?",
+        "content": "Chittagong College Information Technology Club(CCITC) is a platform which will provide students with opportunities to discuss various IT issues outside the classroom and to enhance skills of students other than regular curriculum and also giving benefits to them who wants to do more activities in the field of Computer Technology such as AI, Robotics, Programming, etc. to extract the hidden talents from them.",
+        "video": "https://ccitclub.github.io/database/videos/ccitc-intro.mp4"
+    },
+    "carousel": [
+        {"src":"/assets/img/image6.webp", "alt":"CCITC image 6", "text":"Our alternative. MULTIMEDIA CLASSROOM"},
+        {"src":"/assets/img/image10.webp", "alt":"CCITC image 10", "text":"Routinely. TAKING CLASSES ON DIFFERENT TOPICS"},
+        {"src":"/assets/img/image11.webp", "alt":"CCITC image 11", "text":"Workshop. ON MICROCONTROLLERS AND ARDUINO"},
+        {"src":"/assets/img/image1.webp", "alt":"CCITC image 1", "text":"Meanwhile. TAKING A CLASS"},
+        {"src":"/assets/img/image9.webp", "alt":"CCITC image 9", "text":"An introductory class on. ON MACHINE LEARNING"},
+        {"src":"/assets/img/image8.webp", "alt":"CCITC image 8", "text":"Preparing. SLIDES AND ANALYZING ALL THE DATA"},
+        {"src":"/assets/img/image4.webp", "alt":"CCITC image 4", "text":"Our. MULTIMEDIA CLASSROOM"},
+        {"src":"/assets/img/image3.webp", "alt":"CCITC image 3", "text":"WORKSHOP"},
+        {"src":"/assets/img/image2.webp", "alt":"CCITC image 2", "text":"Co-founders. WITH CHIEF INSTRUCTOR"}
+    ],
+    "piechart": {
+        "data": [],
+        "content": "Analyzing the data (via Google Form) we embedded a Piechart. The Piechart depicts the responses of students from each section of the college. We are quite optimistic about the prospect of this club."
+    },
+        "data": [],
+    "barchart": {
+        "data": [],
+        "content": "We ran a survey about the choices and interests of the students. We collected the data using Google Form. The most interesting and the least interesting topics among the students are portraited in the chart."
+    },
+    "contacts": {
+        "text": "Want to join us in this IT revolution? Give us a call or send us an email and we will get back to you!",
+        "facebook": "https://www.facebook.com/club.ccit/",
+        "instagram": "https://www.instagram.com/ccitc_2020/",
+        "whatsapp": "https://api.whatsapp.com/send?phone=8801829454347",
+        "phone": ["+8801531801651", "+8801991950775", "+8801829454347"],
+        "mail": "ccitcofficial@gmail.com"
+    } 
+}

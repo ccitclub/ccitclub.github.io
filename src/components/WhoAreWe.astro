@@ -1,0 +1,73 @@
+---
+const {whoAreWe} = Astro.props;
+
+---
+
+<section id="About_us" class="wrapper grid-center-all">
+    <main data-sal="slide-down" data-sal-duration="1000" class="who_are_we">
+        <h2>{whoAreWe?.head}</h2>
+        <hr class="long-dash"/>
+        <p class="content">{whoAreWe?.content}</p>
+    </main>
+
+    {whoAreWe?.video ? (<div data-sal="slide-up" data-sal-duration="1500" class="intro-video">
+            <video autoplay="true" muted="true" controls="true" loop="true">
+            <source src={whoAreWe?.video}>
+            your browser may not support videos.
+            </video>
+        </div>): <img src="https://ccitclub.github.io/database/videos/CCITC%20INTRO.webp" alt="CCITC Intro" />}
+</section>
+
+<style>
+.who_are_we {
+    padding: 2rem 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    background: var(--ccitc-background);
+    color: var(--light-text);
+}
+.who_are_we h2 {
+    position: relative;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.who_are_we .content {
+    padding: 25px 2%;
+    max-width: 1000px;
+    justify-content: center;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-align: justify;
+    font-family: system-ui, ui-sans-serif;
+}
+.wrapper {
+    grid-template-columns: 50% 50%;
+    background: var(--ccitc-background);
+}
+.intro-video {
+    background: var(--ccitc-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 5px;
+}
+.intro-video video {
+    max-width: 100%;
+    max-height: 400px;
+}
+.intro-video img {
+    max-width: 100%;
+    max-height: 400px;
+}
+@media (max-width: 945px) {
+    .wrapper {
+    grid-template-columns: auto;
+}
+.who_are_we .content {
+    font-size: clamp(1.1rem, 4vw, 1.2rem);
+}
+}
+</style>

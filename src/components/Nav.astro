@@ -1,0 +1,122 @@
+---
+import Data from '/assets/global.json';
+
+const {blogDomain} = await Data;
+
+const {brand, logo, showBgColor} = Astro.props;
+const nav_items = [{text:'Home', href:'/'}, {text:'About', href:'/about'},{text:'Executives', href:'/executives'},
+                    {text:'Blogs', href: blogDomain}, {text: 'Programs', href:'/programs'}, {text: 'Join us', href: '/joinus'}];
+---
+
+<nav class="mode">
+    <h1 class="nav--brand">
+        <a href="/">
+        {logo?<img style="max-height: 60px;" src={logo} alt="Logo"/>: ''} {brand}
+        </a>
+     </h1>
+    <div class="nav--container">
+        <div class="nav--icon"><button>☰</button></div>
+        <ul class={showBgColor?"nav--items bgColor": "nav--items"}>
+            {nav_items.map((item, i) => (
+                <li><a data-text={item.text} href={item.href}><button class="transparent--button">{item.text}</button></a></li>
+            ))}
+        </ul>
+    </div>
+</nav>
+
+<script>
+const nav = document.querySelector("nav");
+    window.onscroll = function () {
+    changeNavBackground();
+    }
+
+    var navItems = document.querySelectorAll('.nav--container .nav--items li a');
+    
+    if (window.location.pathname === '/') {
+            navItems[0].className += ' active'
+        }
+    navItems.forEach(navItem => {
+        if(navItem?.dataset?.text.toLowerCase().replace(' ', '') === window.location.pathname.split('/')[1] ) {
+            navItem.className += ' active'
+        }
+    })
+        
+    function changeNavBackground () {
+        if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+            nav.style.background = nav.classList.contains("darkmode")?"inherit":"white" ;
+        } else {
+            nav.style.background = "transparent";
+        }
+    }
+</script>
+
+<style>
+nav {
+    display: flex;
+    align-items: center;
+    flex: auto;
+    padding: 1rem 0 0 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    transition: background .5s ease;
+   }
+nav h1 {align-items: center;display: flex;gap: 5px;font-size: 22px;}
+.nav--brand {padding: 0rem 4vw;font-variant: petite-caps; flex: 0.8;}
+.nav--items {display: flex; gap: 4vw; text-decoration: none; list-style: none; font-weight: bolder;}
+.nav--items li {color: inherit;line-height: 2 ;position: relative;transition: all .5s ease; font-weight: bolder;}
+.nav--items li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2pc;
+    background: #bc313a;
+    height: 2px;
+    width: 0%;
+    transition: width .5s ease-in;
+}
+.nav--items li:hover::after,.nav--items li:focus::after{
+    width: 80%;
+}
+.nav--icon {
+    display: none;
+    }
+.nav--icon button{
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    }
+.nav--icon button:focus {
+    background: #f54e4e17;
+    border-radius: 5px;
+}
+.nav--container:focus-within .nav--items {
+    opacity: 1; visibility: visible;transform: translateY(0);
+}
+@media (max-width: 945px) {
+    .nav--icon {
+        cursor: pointer;
+        display: block;
+    }
+    .nav--brand {flex: .95;}
+    .nav--items {
+    z-index: 1;
+    display: grid;
+    position: absolute;
+    padding: 1rem 3rem;
+    right: 0;
+    top: 60px;
+    box-shadow: 1px 1px 4px 2px #ecececbf;
+    border-radius: 10px;
+    transition: all 0.5s ease-out;
+    opacity: 0;
+    visibility: collapse;
+    transform: translateY(50%);
+    background: inherit;
+    backdrop-filter: blur(30px);
+}
+.bgColor {background-color: white;}
+}
+</style>

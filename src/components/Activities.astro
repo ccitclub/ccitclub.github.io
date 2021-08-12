@@ -1,0 +1,60 @@
+---
+import MLICON from "./ICON/MLIcon.astro"
+import RIcon from "./ICON/RobotIcon.astro"
+import PgIcon from "./ICON/ProgrammingIcon.astro"
+import WebIcon from './ICON/WebIcon.astro'
+
+const {parallax} =Astro.props;
+const Delay = 300;
+---
+
+<section id="Activities" style={parallax}>
+    <div class="wrapper text-center text-light">
+    <h2>Activities</h2>
+    <hr class="long-dash"/>
+    <container class="grid-center-all" data-sal="slide-down" data-sal-duration="1000" data-sal-delay={Delay}>
+        <div class="grid-center-all gap">
+            <PgIcon className="icon"/>
+            <p><strong>Programming</strong></p>
+        </div>
+        <div class="grid-center-all gap" data-sal="slide-down" data-sal-duration="1000" data-sal-delay={Delay*2}>
+            <MLICON className="icon"/>
+            <p><strong>Machine Learning</strong></p>
+        </div>
+
+        <div class="grid-center-all gap" data-sal="slide-down" data-sal-duration="1000" data-sal-delay={Delay*3}>
+            <RIcon className="icon width80"/>
+            <p><strong>Robotics</strong></p>
+        </div>
+        <div class="grid-center-all gap" data-sal="slide-down" data-sal-duration="1000" data-sal-delay={Delay*4}>
+            <WebIcon className="icon"/>
+            <p><strong>Web Development</strong></p>
+        </div>
+    </container>
+
+</div>
+</section>
+
+<style>
+.wrapper {
+    padding: 6vw 5vw;
+    background-color: #00000094;
+}
+.wrapper h2 {
+    padding-bottom: 1.5rem;
+    position: relative;
+    margin: 0 auto;
+}
+.wrapper container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1vw;
+    padding-top: 2rem;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.gap {
+    gap: 1vw;
+    text-align: center;
+    text-align: -webkit-center;
+}
+</style>

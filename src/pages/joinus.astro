@@ -1,0 +1,52 @@
+---
+import globalData from '/assets/global.json';
+import Data from '/assets/joinus.json';
+
+import Nav from '../components/Nav.astro';
+import GridItems from '../components/preact/GridItems.jsx';
+import DarkMode from '../components/darkmode.astro';
+
+const {logo, META} = await globalData;
+const {title, description, meta, forms} = await Data;
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>{title}</title>
+        <meta name="keywords" content={META?.keyword}>
+        <meta name="description" content={description}>
+        <meta property="og:title" content={meta?.ogtitle}>
+        <meta property="og:image" content={META?.ogimage}>
+        <meta property="og:description" content={description}>
+        <link rel="icon" type="image/svg+xml" href="/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/style/sal.css">
+        <link rel="stylesheet" href="/style/global.css">
+        <script src="/js/index.js" type="module" defer></script>
+        
+        <style>
+            main {
+                background: inherit;
+            }
+        </style>
+    </head>
+
+    <body class="mode">
+        <main>
+            <Nav logo={logo}/>
+            <div class="pt-80px"><h1 class="py-1 text-center title"> Join us </h1></div>
+            <container class="py-1">
+                <GridItems items={forms} client:visible/>
+            </container>
+            <footer>
+                <p class="pb-1 text-center">© <time>{new Date().getUTCFullYear()}</time> &nbsp; Developed by CCITC</p>
+            </footer>
+            <DarkMode />
+        </main>
+    </body>
+</html>

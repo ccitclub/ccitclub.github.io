@@ -1,0 +1,17 @@
+{   
+    "meta": {
+        "ogtitle": "CCITC -Executives"
+    },
+    "title": "CCITC -Executives",
+    "description": "Rather than traditional executive posts,CCITC believes in hard work and technology based skills and fortunate to have a group of executive members who have the suitable expertise for their own post and the desire of giving benefits to students who want to do more activities in the field of Computer Technology such as AI,Robotics,Programming etc. other than regular curriculum to extract the hidden talents from them.",
+    "executives": [
+        {"name": "Mamnoon Siam", "image": "/assets/img/Executives/siam.webp", "post": "PRESIDENT-DEPARTMENT OF PROGRAMMING"}
+        ,{"name": "Rubaiyat E Zaman", "image": "/assets/img/Executives/rubaiyat.webp", "post": "SECRETARY-DEPARTMENT OF PROGRAMMING"}
+        ,{"name": "Tahamidul Islam Samin", "image": "/assets/img/Executives/samin.webp", "post": "PRESIDENT-DEPARTMENT OF MACHINE LEARNING"}
+        ,{"name": "Mahmudul Hasan", "image": "/assets/img/Executives/mahi.webp", "post": "SECRETARY-DEPARTMENT OF MACHINE LEARNING"}
+        ,{"name": "Mushfiqur Rahman", "image": "/assets/img/Executives/mushfiq.webp", "post": "PRESIDENT-DEPARTMENT OF ROBOTICS"}
+        ,{"name": "Khandakar Shakib", "image": "/assets/img/Executives/shakib.webp", "post": "SECRETARY-DEPARTMENT OF ROBOTICS"}
+        ,{"name": "Shafqat Nawaz", "image": "/assets/img/Executives/shafqat.webp", "post": "PRESIDENT-DEPARTMENT OF WEB AND GRAPHIC DESIGN"}
+        ,{"name": "Tahsin Tajwar", "image": "/assets/img/Executives/tahsin.webp", "post": "SECRETARY-DEPARTMENT OF WEB AND GRAPHIC DESIGN"}
+    ]
+}

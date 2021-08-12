@@ -1,0 +1,58 @@
+---
+const {parallax, head, subhead} = Astro.props;
+
+---
+
+<div id="Home" class="grid-center-all text-center text-light" style={parallax}>
+      <div class="caption">
+        <h1 data-sal="slide-up" data-sal-duration="1000" class="heading">{head.toUpperCase()}</h1>
+        <p class="Typed-strings">{subhead}</p>
+        <div class="flex-center-all flex-start">
+          <p class="Typing"></p>
+        </div>
+        <div style="text-align: justify;">
+          <a href="#findoutmore"><button id="findoutmore" class="button"> FIND OUT MORE</button></a>
+        </div>
+        </div>
+    </div>
+
+<style>
+.flex-start {justify-content: flex-start;}
+#Home {
+  height: 100vh;
+ }
+ .caption {
+      display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin: 5px;
+    border-radius: 10px;
+    background: #7575756b;
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+    box-shadow: rgb(0 0 0 / 45%) 2px 8px 8px;
+    padding: 1rem 0px 1rem 1rem;
+ }
+.caption .heading {
+  font-size: clamp(2em, 8vw, 5em);
+  max-width: 1500px;
+  margin: 0 auto 1vw auto;
+  text-align: left;
+}
+.Typed-strings {display: none;}
+.Typing {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif, ui-rounded;
+  min-height: 1rem;
+  margin-bottom: 1vw;
+}
+.flex-center-all {
+    font-size: clamp(.5rem, 4vw, 1.5rem);
+    font-weight: bolder;
+}
+</style>

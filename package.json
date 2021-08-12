@@ -1,0 +1,19 @@
+{
+  "name": "@example/starter",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "astro dev",
+    "build": "astro build"
+  },
+  "devDependencies": {
+    "astro": "^0.18.9"
+  },
+  "dependencies": {
+    "@astrojs/renderer-preact": "^0.2.1",
+    "@splidejs/splide": "^2.4.21",
+    "chart.js": "^3.5.0",
+    "sal.js": "^0.8.5",
+    "typed.js": "^2.0.12"
+  }
+}
