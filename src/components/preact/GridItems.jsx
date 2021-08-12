@@ -21,7 +21,7 @@ export default function GridItems({ className, id, items }) {
           <h3 className="text-center py-1">{item?.title}</h3>
           <pre className="item_description" style={{maxHeight: fullView?.index===i?"100%":""}}>
             {item?.description}
-            <br/> <a href={`joinus/f/${item.route}`} className="my-1 form-link">HERE'S THE FORM</a>
+            <br/> <a href={`/f/${item.route}`} className="my-1 form-link">HERE'S THE FORM</a>
             </pre>
           <button className="poster-button" onClick={() => ViewFullItem(i)}>{fullView?.index===i?"SEE LESS":"SEE MORE"}</button>
         </div>
