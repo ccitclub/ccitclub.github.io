@@ -13,7 +13,7 @@ const {carousel} = Astro.props;
                         <h4>{image?.text.split('.')[0]}</h4>
                         <h3>{image?.text.split('.')[1]}</h3>
                     </div>
-				    <img class="slide__show__img" src={image?.src} alt={image?.alt} />
+				    <img class="slide__show__img" loading="lazy" src={image?.src} alt={image?.alt}/>
 			    </li>
             )): ''
         }
