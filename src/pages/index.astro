@@ -77,9 +77,6 @@ let title = 'CCITC';
     </main>
 
     <script>
-        if('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/serviceWorker.js')
-        }
         
     var videos = document.getElementsByTagName("video");
     
@@ -88,7 +85,7 @@ let title = 'CCITC';
        
 async function checkScroll() {
     var fraction = 0.8; // Play when 80% of the player is visible.
-    for(var i = 0; i < videos.length; i++) {
+    for(let i = 0; i < videos.length; i++) {
         var video = videos[i];
         let x = video.offsetLeft;
         let y = video.offsetTop;
