@@ -1,40 +1,15 @@
-# Welcome to [Astro](https://astro.build)
+# Welcome to the official github profile of CCITC
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+CCITC -> Chittagong College Information and Technology Club. 🔥
+Yeah!! That's quite mouthful.
 
-## 🚀 Project Structure
+## About
+It's is a platform which will provide students with opportunities to discuss various IT issues outside the classroom and to enhance skills of students other than regular curriculum and also giving benefits to them who wants to do more activities in the field of Computer Technology such as AI, Robotics, Programming, etc. to extract the hidden talents from them.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Social Profiles
+<a href="https://www.facebook.com/club.ccit"><img src="https://img.icons8.com/color/48/000000/facebook-new.png"/></a>
+<a href="mailto:ccitcofficial@gmail.com"><img src="https://img.icons8.com/color/48/000000/gmail-new.png"/></a>
 
-```
-/
-├── public/
-│   ├── robots.txt
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Tour.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Website
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command         | Action                                      |
-|:----------------|:--------------------------------------------|
-| `npm install`   | Installs dependencies                       |
-| `npm start`     | Starts local dev server at `localhost:3000` |
-| `npm run build` | Build your production site to `./dist/`     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://github.com/snowpackjs/astro) or jump into our [Discord server](https://astro.build/chat).
+<a href="https://www.ccitc.xyz"><img src="./public/favicon.png" style="width:48px" alt="CCITC"/><br/> ccitc.xyz</a>
