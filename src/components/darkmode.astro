@@ -25,6 +25,11 @@ if(localStorage.getItem('darkMode') == 'true') {
 modeToggleButton.onclick = (e) => {
     modeables.forEach(modeable => {
         modeable.classList.toggle('darkmode');
+
+        if (window.matchMedia) return false
+        else if (window.matchMedia("(prefers-color-scheme: dark)").matches){
+          console.log("Dark theme active")
+        }
     });
 
     localStorage.setItem('darkMode', modeToggleButton.checked);

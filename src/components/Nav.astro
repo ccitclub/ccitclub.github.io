@@ -43,9 +43,11 @@ const nav = document.querySelector("nav");
         
     function changeNavBackground () {
         if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-            nav.style.background = nav.classList.contains("darkmode")?"inherit":"white" ;
+            nav.style.background = nav.classList.contains("darkmode")?"inherit":"white";
+            document.querySelector('.nav--icon').style.color = 'black'
         } else {
             nav.style.background = "transparent";
+            document.getElementsByClassName('nav--icon')[0].style.color = 'white'
         }
     }
 </script>
@@ -64,7 +66,7 @@ nav {
 nav h1 {align-items: center;display: flex;gap: 5px;font-size: 22px;}
 .nav--brand {padding: 0rem 4vw;font-variant: petite-caps; flex: 0.8;}
 .nav--items {display: flex; gap: 4vw; text-decoration: none; list-style: none; font-weight: bolder;}
-.nav--items li {color: inherit;line-height: 2 ;position: relative;transition: all .5s ease; font-weight: bolder;}
+.nav--items li {color: black;line-height: 2 ;position: relative;transition: all .5s ease; font-weight: bolder;}
 .nav--items li::after {
     content: "";
     position: absolute;
@@ -113,9 +115,8 @@ nav h1 {align-items: center;display: flex;gap: 5px;font-size: 22px;}
     transition: all 0.5s ease-out;
     opacity: 0;
     visibility: collapse;
+    background-color: white;
     transform: translateY(50%);
-    background: inherit;
-    backdrop-filter: blur(30px);
 }
 .bgColor {background-color: white;}
 }
